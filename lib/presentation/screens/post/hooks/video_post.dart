@@ -98,10 +98,19 @@ class _VideoPostState extends HookState<VideoPostSource, _VideoPostHook> {
     final headers =
         hook.ref.read(postHeadersFactoryProvider(hook.post, cookies: cookies));
 
-    cache
-        .getFileStream(hook.post.content.url,
-            headers: headers, withProgress: true)
-        .listen(onFileStream);
+    final uri = Uri.parse(hook.post.content.url);
+    final controller = VideoPlayerController.networkUrl(uri,
+        videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true))
+      ..setLooping(true);
+    final prog = DownloadProgress(hook.post.content.url, 1, 1);
+
+    setState(() {
+      source = source.copyWith(controller: controller, progress: prog);
+    });
+    //cache
+    //    .getFileStream(hook.post.content.url,
+    //        headers: headers, withProgress: true)
+    //    .listen(onFileStream);
   }
 
   void destroyController() {
