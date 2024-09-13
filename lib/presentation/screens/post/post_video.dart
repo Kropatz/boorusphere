@@ -78,6 +78,7 @@ class _PostVideoContent extends HookConsumerWidget {
     final blurNoticeAnimator =
         useAnimationController(duration: kThemeChangeDuration);
     final showOverlay = useState(true);
+    final showPauseOverlay = useState(false); // don't show pause button on initial load
     final markMayNeedRebuild = useMarkMayNeedRebuild();
     final isPlaying = useState(true);
     final hideTimer = useState(Timer(const Duration(seconds: 2), () {}));
@@ -86,6 +87,7 @@ class _PostVideoContent extends HookConsumerWidget {
 
     onVisibilityChange(bool value) {
       showOverlay.value = value;
+      showPauseOverlay.value = value;
       onToolboxVisibilityChange.call(value);
     }
 
@@ -153,7 +155,7 @@ class _PostVideoContent extends HookConsumerWidget {
             onVisibilityChange.call(!showOverlay.value);
           },
           child: Container(
-            color: showOverlay.value ? Colors.black38 : Colors.transparent,
+            color: showPauseOverlay.value ? Colors.black38 : Colors.transparent,
             child: Visibility(
               visible: showOverlay.value,
               replacement: const SizedBox.expand(),
@@ -161,19 +163,22 @@ class _PostVideoContent extends HookConsumerWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    _PlayPauseOverlay(
-                      isPlaying: isPlaying.value,
-                      onPressed: () {
-                        if (controller != null) {
-                          isPlaying.value = !controller.value.isPlaying;
-                          controller.value.isPlaying
-                              ? controller.pause()
-                              : controller.play();
-                          scheduleHide();
-                        } else {
-                          isPlaying.value = !isPlaying.value;
-                        }
-                      },
+                    Visibility(
+                      visible: showPauseOverlay.value,
+                      child: _PlayPauseOverlay(
+                        isPlaying: isPlaying.value,
+                        onPressed: () {
+                          if (controller != null) {
+                            isPlaying.value = !controller.value.isPlaying;
+                            controller.value.isPlaying
+                                ? controller.pause()
+                                : controller.play();
+                            scheduleHide();
+                          } else {
+                            isPlaying.value = !isPlaying.value;
+                          }
+                        },
+                      ),
                     ),
                     _ToolboxOverlay(
                       isPlaying: isPlaying.value,
