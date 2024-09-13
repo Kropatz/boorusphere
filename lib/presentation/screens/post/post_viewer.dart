@@ -80,7 +80,7 @@ class PostViewer extends HookConsumerWidget {
 
     return PopScope(
       canPop: true,
-      onPopInvoked: (didPop) async {
+      onPopInvokedWithResult: (didPop, _) async {
         ref.watch(fullscreenStateProvider.notifier).reset();
         context.scaffoldMessenger.removeCurrentSnackBar();
       },

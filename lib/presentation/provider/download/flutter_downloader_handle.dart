@@ -26,7 +26,7 @@ class FlutterDownloaderHandle {
 
   void listen(void Function(DownloadProgress progress) onUpdate) {
     receiver.listen((data) {
-      final status = DownloadTaskStatus.enqueued;
+      const status = DownloadTaskStatus.enqueued;
       final progress = DownloadProgress(
         id: data[0],
         status: status.toDownloadStatus(),

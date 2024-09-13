@@ -109,7 +109,7 @@ class _Home extends HookConsumerWidget {
       canPop: (allowPop.value || context.router.canPop()) &&
           !drawer.isOpen &&
           !searchBar.isOpen,
-      onPopInvoked: (didPop) async {
+      onPopInvokedWithResult: (didPop, _) async {
         if (drawer.isOpen || searchBar.isOpen) {
           maybePopTimer.cancel();
           context.scaffoldMessenger.hideCurrentSnackBar();

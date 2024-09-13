@@ -78,7 +78,8 @@ class _PostVideoContent extends HookConsumerWidget {
     final blurNoticeAnimator =
         useAnimationController(duration: kThemeChangeDuration);
     final showOverlay = useState(true);
-    final showPauseOverlay = useState(false); // don't show pause button on initial load
+    // don't show pause button on initial load
+    final showPauseOverlay = useState(false);
     final markMayNeedRebuild = useMarkMayNeedRebuild();
     final isPlaying = useState(true);
     final hideTimer = useState(Timer(const Duration(seconds: 2), () {}));
