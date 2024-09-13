@@ -86,15 +86,15 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   auto_route_generator: ^9.0.0
-  build_runner: ^2.0.5
+  build_runner: ^2.4.12
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
-  freezed: ^2.1.0+1
+  freezed: ^2.5.7
   grinder: ^0.9.4
   hive_generator: ^2.0.0
   json_serializable: ^6.7.0
   mocktail: ^1.0.4
-  riverpod_generator: ^2.0.0
+  riverpod_generator: ^2.4.3
   pigeon: ^22.3.0
 
 flutter_icons:
