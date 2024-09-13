@@ -72,16 +72,22 @@ android {
         debug {
             if (keystoreProperties.containsKey('keyAlias')) {
                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
             }
         }
         profile {
             if (keystoreProperties.containsKey('keyAlias')) {
                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
             }
         }
         release {
             if (keystoreProperties.containsKey('keyAlias')) {
                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
             }
         }
     }
