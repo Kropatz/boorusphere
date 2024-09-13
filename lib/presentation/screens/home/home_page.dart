@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:async/async.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:boorusphere/domain/provider.dart';
@@ -107,25 +105,23 @@ class _Home extends HookConsumerWidget {
       maybePopTimer.cancel();
     }
 
-    return WillPopScope(
-      onWillPop: () async {
-        if (!context.mounted) return true;
-
+    return PopScope(
+      canPop: (allowPop.value || context.router.canPop()) &&
+          !drawer.isOpen &&
+          !searchBar.isOpen,
+      onPopInvoked: (didPop) async {
         if (drawer.isOpen || searchBar.isOpen) {
           maybePopTimer.cancel();
           context.scaffoldMessenger.hideCurrentSnackBar();
           if (drawer.isOpen) {
-            unawaited(drawer.close());
-            return false;
+            await drawer.close();
           } else if (searchBar.isOpen) {
             searchBar.close();
-            return false;
           }
+          return;
         }
 
-        if (context.router.canPop()) return true;
-
-        if (!allowPop.value) {
+        if (!allowPop.value && !context.router.canPop()) {
           allowPop.value = true;
           context.scaffoldMessenger.showSnackBar(SnackBar(
             content: Text(context.t.retryPopBack),
@@ -133,10 +129,7 @@ class _Home extends HookConsumerWidget {
           ));
           maybePopTimer.cancel();
           maybePopTimer.reset();
-          return false;
         }
-
-        return true;
       },
       child: _SlidableContainer(
         edgeDragWidth: atHomeScreen ? context.mediaQuery.size.width : 0,

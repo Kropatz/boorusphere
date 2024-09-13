@@ -33,7 +33,7 @@ class AboutPage extends ConsumerWidget {
               Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: context.colorScheme.onBackground,
+                  color: context.colorScheme.onSurface,
                 ),
                 padding: const EdgeInsets.all(32),
                 margin: const EdgeInsets.symmetric(vertical: 16),
@@ -168,10 +168,7 @@ class _Downloader extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final progress = ref.watch(appUpdateProgressProvider);
-    final appUpdater = ref.watch(appUpdaterProvider);
-
-    final hasUpdateApk =
-        progress.status.isDownloaded || appUpdater.isExported(version);
+    final hasUpdateApk = progress.status.isDownloaded;
 
     final showDownloadButton = progress.status.isCanceled ||
         progress.status.isFailed ||
