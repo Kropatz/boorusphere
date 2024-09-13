@@ -19,7 +19,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:wakelock/wakelock.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 
 class PostViewer extends HookConsumerWidget {
   const PostViewer({
@@ -74,8 +74,8 @@ class PostViewer extends HookConsumerWidget {
 
     useEffect(() {
       Future(() => timelineController.scrollTo(currentPage.value));
-      Wakelock.enable();
-      return Wakelock.disable;
+      WakelockPlus.enable();
+      return WakelockPlus.disable;
     }, []);
 
     return PopScope(

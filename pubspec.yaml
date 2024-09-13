@@ -36,7 +36,7 @@ dependencies:
     sdk: flutter
   archive: ^3.3.5
   async: ^2.8.2
-  auto_route: ^8.2.0
+  auto_route: ^9.2.2
   collection: ^1.16.0
   cookie_jar: ^4.0.1
   deep_pick: ^1.0.0
@@ -44,7 +44,7 @@ dependencies:
   dio_smart_retry: ^6.0.0
   dio: ^5.0.0
   dynamic_color: ^1.4.0
-  file_picker: ^5.2.3
+  file_picker: ^8.1.2
   flutter_cache_manager: ^3.0.0-nullsafety.1
   flutter_displaymode: ^0.6.0
   flutter_downloader: ^1.10.4
@@ -77,15 +77,15 @@ dependencies:
   url_launcher: ^6.0.3
   video_player: ^2.2.5
   visibility_detector: ^0.4.0+2
-  wakelock: ^0.6.2
   xml2json: ^6.0.0
   yaml: ^3.1.0
   extended_image: ^8.2.0
+  wakelock_plus: ^1.2.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  auto_route_generator: ^8.0.0
+  auto_route_generator: ^9.0.0
   build_runner: ^2.0.5
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
@@ -95,7 +95,7 @@ dev_dependencies:
   json_serializable: ^6.7.0
   mocktail: ^1.0.4
   riverpod_generator: ^2.0.0
-  pigeon: ^20.0.2
+  pigeon: ^22.3.0
 
 flutter_icons:
   android: true

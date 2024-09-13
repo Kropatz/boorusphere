@@ -71,6 +71,10 @@ flutter pub get
 ```bash
 dart run build_runner build --delete-conflicting-outputs
 ```
+If that doesn't work, try 
+```bash
+ flutter pub run build_runner build --delete-conflicting-outputs
+ ```
 
 - Generate translation
 

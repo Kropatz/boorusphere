@@ -4,7 +4,7 @@ import 'package:boorusphere/presentation/routes/slide_page_route.dart';
 import 'package:flutter/widgets.dart';
 
 @AutoRouterConfig()
-class AppRouter extends $AppRouter {
+class AppRouter extends RootStackRouter {
   static PageRoute<T> _routeBuilder<T>(
     BuildContext context,
     Widget child,
