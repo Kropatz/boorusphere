@@ -4,27 +4,29 @@
     <div>Simple, content-focused booru viewer for Android</div>
     <br/>
     <div>
-        <a href="https://github.com/nullxception/boorusphere/stargazers">
-            <img alt="Stargazers" src="https://img.shields.io/github/stars/nullxception/boorusphere?style=for-the-badge&logo=apachespark&logoColor=ebebf0&color=ff89b5&labelColor=23232F"/>
+        <a href="https://github.com/Kropatz/boorusphere/stargazers">
+            <img alt="Stargazers" src="https://img.shields.io/github/stars/Kropatz/boorusphere?style=for-the-badge&logo=apachespark&logoColor=ebebf0&color=ff89b5&labelColor=23232F"/>
         </a>
-        <a href="https://github.com/nullxception/boorusphere/releases/latest">
-            <img alt="Latest release" src="https://img.shields.io/github/v/release/nullxception/boorusphere?style=for-the-badge&logo=pkgsrc&logoColor=ebebf0&labelColor=23232F&color=95b6ff">
+        <a href="https://github.com/Kropatz/boorusphere/releases/latest">
+            <img alt="Latest release" src="https://img.shields.io/github/v/release/Kropatz/boorusphere?style=for-the-badge&logo=pkgsrc&logoColor=ebebf0&labelColor=23232F&color=95b6ff">
         </a>
-        <a href="https://github.com/nullxception/boorusphere/actions">
-            <img alt="Workflow status" src="https://img.shields.io/github/actions/workflow/status/nullxception/boorusphere/ci.yml?style=for-the-badge&logo=githubactions&logoColor=ebebf0&labelColor=23232F&label=CI">
+        <a href="https://github.com/Kropatz/boorusphere/actions">
+            <img alt="Workflow status" src="https://img.shields.io/github/actions/workflow/status/Kropatz/boorusphere/ci.yml?style=for-the-badge&logo=githubactions&logoColor=ebebf0&labelColor=23232F&label=CI">
         </a>
-        <a href="https://github.com/nullxception/boorusphere/blob/main/LICENSE.md">
-            <img alt="License" src="https://img.shields.io/github/license/nullxception/boorusphere?style=for-the-badge&logo=gitbook&logoColor=ebebf0&color=b0a8f7&labelColor=23232F"/>
+        <a href="https://github.com/Kropatz/boorusphere/blob/main/LICENSE.md">
+            <img alt="License" src="https://img.shields.io/github/license/Kropatz/boorusphere?style=for-the-badge&logo=gitbook&logoColor=ebebf0&color=b0a8f7&labelColor=23232F"/>
         </a>
     </div>
     <br/>
     <div>
-        <a href="https://github.com/nullxception/boorusphere/releases">
+        <a href="https://github.com/Kropatz/boorusphere/releases">
             <img src="assets/button-GHReleases.png" alt="GitHub release" width="160">
         </a>
+        <!--
         <a href="https://apt.izzysoft.de/fdroid/index/apk/io.chaldeaprjkt.boorusphere">
             <img src="assets/button-IzzyOnDroid.png" alt="IzzyOnDroid release" width="160">
         </a>
+        -->
     </div>
 </div>
 
@@ -56,7 +58,7 @@
 - Fetch latest source code
 
 ```bash
-git clone https://github.com/nullxception/boorusphere.git
+git clone https://github.com/Kropatz/boorusphere.git
 cd boorusphere
 ```
 
