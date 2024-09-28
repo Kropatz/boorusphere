@@ -1,3 +1,8 @@
+## 1.4.6
+
+* Stream videos instead of waiting for the full download
+* Hide pause overlay on initial video load
+
 ## 1.4.5
 
 * Fix backstack exit got blocked by the double back-tap prompt
