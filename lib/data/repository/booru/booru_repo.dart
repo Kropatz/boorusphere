@@ -3,6 +3,7 @@ import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/data/repository/booru/parser/booru_parser.dart';
 import 'package:boorusphere/data/repository/server/entity/server.dart';
 import 'package:boorusphere/domain/repository/imageboards_repo.dart';
+import 'package:boorusphere/presentation/provider/booru/suggestion_state.dart';
 import 'package:boorusphere/presentation/provider/server_data_state.dart';
 import 'package:boorusphere/utils/logger.dart';
 import 'package:dio/dio.dart';
@@ -31,7 +32,7 @@ class BooruRepo implements ImageboardRepo {
   }
 
   @override
-  Future<Set<String>> getSuggestion(String word) async {
+  Future<Set<Suggestion>> getSuggestion(String word) async {
     var parser = parsers.firstWhere((x) => x.id == server.suggestionParserId,
         orElse: NoParser.new);
 

@@ -6,6 +6,7 @@ import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/data/repository/booru/parser/booru_parser.dart';
 import 'package:boorusphere/data/repository/booru/utils/booru_util.dart';
 import 'package:boorusphere/data/repository/server/entity/server.dart';
+import 'package:boorusphere/presentation/provider/booru/suggestion_state.dart';
 import 'package:boorusphere/utils/extensions/pick.dart';
 import 'package:deep_pick/deep_pick.dart';
 import 'package:dio/dio.dart';
@@ -126,11 +127,11 @@ class ShimmieXmlParser extends BooruParser {
   }
 
   @override
-  Set<String> parseSuggestion(Server server, Response res) {
+  Set<Suggestion> parseSuggestion(Server server, Response res) {
     Map<String, int> counted = Map.from(res.data);
     return counted.entries
         .where((it) => it.value > 0)
-        .map((it) => BooruUtil.decodeTag(it.key))
+        .map((it) => Suggestion(BooruUtil.decodeTag(it.key), it.value))
         .toSet();
   }
 }

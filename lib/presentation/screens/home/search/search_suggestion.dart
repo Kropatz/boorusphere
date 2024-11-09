@@ -209,7 +209,8 @@ class _Suggestion extends HookConsumerWidget {
                 child: _SuggestionEntryTile(
                   data: _SuggestionEntry(
                     isHistory: false,
-                    text: data.elementAt(index),
+                    text: data.elementAt(index).name,
+                    postCount: data.elementAt(index).count,
                   ),
                   onTap: (str) {
                     searchBar.submit(context, str);
@@ -274,11 +275,13 @@ class _ErrorSuggestion extends StatelessWidget {
 class _SuggestionEntry {
   _SuggestionEntry({
     this.text = '',
+    this.postCount = 0,
     this.server = '',
     required this.isHistory,
   });
 
   final String text;
+  final int postCount;
   final String server;
   final bool isHistory;
 }
@@ -307,6 +310,10 @@ class _SuggestionEntryTile extends StatelessWidget {
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
+          if (data.postCount > 0) ...[
+            Text(data.postCount.toString()),
+            const SizedBox(width: 8),
+          ],
           IconButton(
             onPressed: () => onAdded.call(data.text),
             icon: const Icon(Icons.add, size: 22),

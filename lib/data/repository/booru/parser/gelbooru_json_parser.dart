@@ -2,6 +2,7 @@ import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/data/repository/booru/parser/booru_parser.dart';
 import 'package:boorusphere/data/repository/booru/utils/booru_util.dart';
 import 'package:boorusphere/data/repository/server/entity/server.dart';
+import 'package:boorusphere/presentation/provider/booru/suggestion_state.dart';
 import 'package:boorusphere/utils/extensions/pick.dart';
 import 'package:deep_pick/deep_pick.dart';
 import 'package:dio/dio.dart';
@@ -93,15 +94,15 @@ class GelbooruJsonParser extends BooruParser {
   }
 
   @override
-  Set<String> parseSuggestion(Server server, Response res) {
+  Set<Suggestion> parseSuggestion(Server server, Response res) {
     final entries = List.from(res.data['tag']);
 
-    final result = <String>{};
+    final result = <Suggestion>{};
     for (final Map<String, dynamic> entry in entries) {
       final tag = pick(entry, 'name').asStringOrNull() ?? '';
       final postCount = pick(entry, 'count').asIntOrNull() ?? 0;
       if (postCount > 0 && tag.isNotEmpty) {
-        result.add(BooruUtil.decodeTag(tag));
+        result.add(Suggestion(BooruUtil.decodeTag(tag), postCount));
       }
     }
 

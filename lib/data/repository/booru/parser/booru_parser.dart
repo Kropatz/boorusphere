@@ -1,5 +1,6 @@
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/data/repository/server/entity/server.dart';
+import 'package:boorusphere/presentation/provider/booru/suggestion_state.dart';
 import 'package:dio/dio.dart';
 
 abstract class BooruParser {
@@ -14,7 +15,7 @@ abstract class BooruParser {
   bool canParsePage(Response res) => false;
   Iterable<Post> parsePage(Server server, Response res) => [];
   bool canParseSuggestion(Response res) => false;
-  Iterable<String> parseSuggestion(Server server, Response res) => [];
+  Iterable<Suggestion> parseSuggestion(Server server, Response res) => [];
 }
 
 enum BooruParserType { search, suggestion }
