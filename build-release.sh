@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 # Get version from pubspec.yaml
 VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d "+" -f1)
 BUILD_NUMBER=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d "+" -f2)

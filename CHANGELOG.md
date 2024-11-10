@@ -1,3 +1,8 @@
+## 1.4.7
+
+* Add post count to tag suggestions
+* Support for autocomplete.php (Safebooru and others)
+
 ## 1.4.6
 
 * Stream videos instead of waiting for the full download
