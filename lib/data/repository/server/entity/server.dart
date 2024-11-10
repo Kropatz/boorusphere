@@ -60,7 +60,7 @@ class Server with _$Server {
     }
 
     if (query.isEmpty) {
-      if (url.contains('name_pattern=')) {
+      if (url.contains('name_pattern=') || url.contains('?q=')) {
         return url.replaceAll(RegExp(r'[*%]*{tag-part}[*%]*'), '');
       }
       return url.replaceAll(RegExp(r'[*%]*{tag-part}[*%]*'), '*');

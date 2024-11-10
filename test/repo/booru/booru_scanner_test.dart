@@ -1,4 +1,5 @@
 import 'package:boorusphere/data/provider.dart';
+import 'package:boorusphere/data/repository/booru/parser/autocomplete.dart';
 import 'package:boorusphere/data/repository/booru/parser/booru_parser.dart';
 import 'package:boorusphere/data/repository/booru/parser/booruonrails_json_parser.dart';
 import 'package:boorusphere/data/repository/booru/parser/danbooru_json_parser.dart';
@@ -139,8 +140,8 @@ void main() async {
           FakeResponseBody.fromFixture('safebooru/posts.xml', 200),
         )
         ..put(
-          '$host/index.php?page=dapi&s=tag&q=index&name_pattern=%25a%25&orderby=count&limit=30',
-          FakeResponseBody.fromFixture('safebooru/tags.xml', 200),
+          '$host/autocomplete.php?q=a',
+          FakeResponseBody.fromFixture('safebooru/tags.json', 200),
         )
         ..put(
           '$host/index.php?page=post&s=view&id=100',
@@ -153,11 +154,12 @@ void main() async {
       final result = await scanner.scan(const Server(homepage: host));
       final parser = GelbooruXmlParser();
       final resultParser = SafebooruXmlParser();
+      final suggestionParser = AutocompleteJsonParser();
 
       expect(result.searchUrl, parser.searchQuery);
       expect(result.searchParserId, resultParser.id);
-      expect(result.tagSuggestionUrl, parser.suggestionQuery);
-      expect(result.suggestionParserId, resultParser.id);
+      expect(result.tagSuggestionUrl, suggestionParser.suggestionQuery);
+      expect(result.suggestionParserId, suggestionParser.id);
       expect(result.postUrl, parser.postUrl);
     });
 

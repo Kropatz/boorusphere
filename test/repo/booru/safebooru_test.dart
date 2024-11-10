@@ -53,14 +53,14 @@ void main() async {
       isA<Iterable>().having((x) => x.length, 'total', option.limit),
     );
 
-    const fakeTags = 'safebooru/tags.xml';
+    const fakeTags = 'safebooru/tags.json';
     when(() => adapter.fetch(any(), any(), any()))
         .thenAnswer((_) async => FakeResponseBody.fromFixture(fakeTags, 200));
 
     expect(
       await ref.read(imageboardRepoProvider(server)).getSuggestion('book'),
       isA<Iterable>()
-          .having((x) => x.length, 'total', Server.tagSuggestionLimit),
+          .having((x) => x.length, 'total', 10),
     );
   });
 }

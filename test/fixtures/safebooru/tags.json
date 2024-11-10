@@ -1,0 +1,42 @@
+[
+  {
+    "label": "book (95370)",
+    "value": "book"
+  },
+  {
+    "label": "bookshelf (11232)",
+    "value": "bookshelf"
+  },
+  {
+    "label": "book_stack (5528)",
+    "value": "book_stack"
+  },
+  {
+    "label": "bookmark (1201)",
+    "value": "bookmark"
+  },
+  {
+    "label": "bookbag (1000)",
+    "value": "bookbag"
+  },
+  {
+    "label": "book_hug (662)",
+    "value": "book_hug"
+  },
+  {
+    "label": "book_on_lap (452)",
+    "value": "book_on_lap"
+  },
+  {
+    "label": "book_on_head (230)",
+    "value": "book_on_head"
+  },
+  {
+    "label": "bookstore (137)",
+    "value": "bookstore"
+  },
+  {
+    "label": "book_holster (77)",
+    "value": "book_holster"
+  }
+]
