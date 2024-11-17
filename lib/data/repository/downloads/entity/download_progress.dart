@@ -1,6 +1,6 @@
 import 'package:boorusphere/data/repository/downloads/entity/download_status.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 part 'download_progress.freezed.dart';
 part 'download_progress.g.dart';

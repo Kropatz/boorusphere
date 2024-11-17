@@ -4,7 +4,7 @@ import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/data/repository/favorite_post/entity/favorite_post.dart';
 import 'package:boorusphere/domain/repository/favorite_post_repo.dart';
 import 'package:boorusphere/presentation/provider/data_backup/data_backup.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 class UserFavoritePostRepo implements FavoritePostRepo {
   UserFavoritePostRepo(this.box);

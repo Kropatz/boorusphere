@@ -1,6 +1,6 @@
 import 'package:boorusphere/data/repository/version/entity/app_version.dart';
 import 'package:boorusphere/domain/repository/app_state_repo.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 class CurrentAppStateRepo implements AppStateRepo {
   CurrentAppStateRepo(this.box);

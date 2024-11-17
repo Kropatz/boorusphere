@@ -1,6 +1,6 @@
 import 'package:boorusphere/presentation/i18n/strings.g.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 
 part 'download_quality.g.dart';
 

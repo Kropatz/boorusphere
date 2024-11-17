@@ -4,7 +4,7 @@ import 'package:boorusphere/data/repository/downloads/entity/download_status.dar
 import 'package:boorusphere/domain/repository/downloads_repo.dart';
 import 'package:boorusphere/pigeon/storage_util.pi.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:path/path.dart' as path;
 import 'package:sqflite/sqflite.dart' as sqflite;
 

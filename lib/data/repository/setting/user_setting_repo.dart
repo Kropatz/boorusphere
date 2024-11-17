@@ -5,7 +5,7 @@ import 'package:boorusphere/domain/repository/settings_repo.dart';
 import 'package:boorusphere/presentation/provider/data_backup/data_backup.dart';
 import 'package:boorusphere/presentation/provider/settings/entity/booru_rating.dart';
 import 'package:boorusphere/presentation/provider/settings/entity/download_quality.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 class UserSettingsRepo implements SettingsRepo {
   UserSettingsRepo(this.box);

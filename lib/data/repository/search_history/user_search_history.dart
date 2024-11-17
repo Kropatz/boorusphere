@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:boorusphere/data/repository/search_history/entity/search_history.dart';
 import 'package:boorusphere/domain/repository/search_history_repo.dart';
 import 'package:boorusphere/presentation/provider/data_backup/data_backup.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 class UserSearchHistoryRepo implements SearchHistoryRepo {
   UserSearchHistoryRepo(this.box);

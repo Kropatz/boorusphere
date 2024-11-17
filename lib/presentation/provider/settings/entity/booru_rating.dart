@@ -1,6 +1,6 @@
 import 'package:boorusphere/presentation/i18n/strings.g.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 part 'booru_rating.g.dart';
 

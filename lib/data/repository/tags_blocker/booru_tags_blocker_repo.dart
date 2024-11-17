@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:boorusphere/data/repository/tags_blocker/entity/booru_tag.dart';
 import 'package:boorusphere/domain/repository/tags_blocker_repo.dart';
 import 'package:boorusphere/presentation/provider/data_backup/data_backup.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 
 class BooruTagsBlockerRepo implements TagsBlockerRepo {
   BooruTagsBlockerRepo(this.box);
