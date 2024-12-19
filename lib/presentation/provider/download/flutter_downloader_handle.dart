@@ -2,7 +2,7 @@ import 'dart:isolate';
 import 'dart:ui';
 
 import 'package:boorusphere/data/repository/downloads/entity/download_progress.dart';
-import 'package:boorusphere/presentation/utils/extensions/flutter_downloader.dart';
+import 'package:boorusphere/data/repository/downloads/entity/download_status.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -26,10 +26,9 @@ class FlutterDownloaderHandle {
 
   void listen(void Function(DownloadProgress progress) onUpdate) {
     receiver.listen((data) {
-      const status = DownloadTaskStatus.enqueued;
       final progress = DownloadProgress(
         id: data[0],
-        status: status.toDownloadStatus(),
+        status: DownloadStatus.values[data[1]],
         progress: data[2],
         timestamp: DateTime.now().millisecondsSinceEpoch,
       );

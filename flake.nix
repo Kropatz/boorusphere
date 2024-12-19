@@ -25,7 +25,13 @@
         devShell = with pkgs;
           mkShell rec {
             ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
+            JAVA_HOME = "${jdk17}";
             buildInputs = [ flutter androidSdk jdk17 dart ];
+            shellHook = ''
+              export ANDROID_SDK_ROOT JAVA_HOME;
+              flutter config --no-analytics;
+              flutter config --jdk-dir=$JAVA_HOME;
+              '';
           };
       });
 }
