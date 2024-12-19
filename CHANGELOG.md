@@ -1,3 +1,7 @@
+## 1.4.8
+
+* Fix download indicator
+
 ## 1.4.7
 
 * Add post count to tag suggestions
