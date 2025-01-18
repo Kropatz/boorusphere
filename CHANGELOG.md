@@ -1,3 +1,7 @@
+## 1.4.9
+
+* Add german translation - Thanks @LorenorZorro3000
+
 ## 1.4.8
 
 * Fix download indicator
