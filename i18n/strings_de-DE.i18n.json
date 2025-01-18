@@ -1,0 +1,241 @@
+{
+  "language_name": "Deutsch",
+  "language_alias": "German (de-DE)",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "clear": "Leeren",
+  "retry": "Wiederholen",
+  "remove": "Entfernen",
+  "edit": "Bearbeiten",
+  "add": "Hinzufügen",
+  "reset": "Zurücksetzen",
+  "reset_to_default": "Auf Standard zurücksetzen",
+  "scan": "Scannen",
+  "load_more": "Mehr laden",
+  "clearing": "Leeren...",
+  "details": "Details",
+  "location": "Standort",
+  "source": "Quelle",
+  "file_sample": "Beispieldatei",
+  "file_og": "Originaldatei",
+  "tags": "Tags",
+  "meta": "Meta",
+  "artist": "Künstler",
+  "character": "Charakter",
+  "copyright": "Urheberrecht",
+  "general": "Allgemein",
+  "oss_license": "Open-Source-Lizenz",
+  "github": "GitHub",
+  "open_settings": "Einstellungen öffnen",
+  "copy_success": "In die Zwischenablage kopiert",
+  "load_image_failed": "Bild konnte nicht geladen werden",
+  "unsafe_content": "Inhalt ist nicht sicher",
+  "unblur": "Zeig es mir",
+  "unsupported_media": "${file_ext} wird nicht unterstützt",
+  "open_externally": "Extern öffnen",
+  "retry_pop_back": "Drücken Sie erneut zurück, um zu beenden",
+  "home": "Startseite",
+  "recently": "Kürzlich",
+  "search_hint": "Suche auf ${server_name}...",
+  "version": "Version ${version}",
+  "backup": "Sicherung",
+  "restore": "Wiederherstellen",
+  "searchHistory": "Suchverlauf",
+  "score": "Bewertung",
+  "always_ask": "Immer fragen",
+  "action_continue": "Fortfahren",
+  "auto": "Automatisch",
+  "rating": {
+    "title": "Bewertung",
+    "questionable": "Fragwürdig",
+    "explicit": "Explizit",
+    "safe": "Sicher",
+    "sensitive": "Sensibel",
+    "all": "Alle",
+    "disable_rating_safe": "Bewertung:sicher deaktivieren"
+  },
+  "page_status": {
+    "http_error": "Kann kein Ergebnis von ${server_name} erhalten",
+    "no_result": {
+      "zero": "Kein Ergebnis gefunden",
+      "other": "Keine weiteren Ergebnisse"
+    },
+    "no_result_for_query": {
+      "zero": "Kein Ergebnis für ${query} gefunden",
+      "other": "Keine weiteren Ergebnisse für ${query}"
+    },
+    "blocked": "'${query}' wird von der Tags-Blockierung blockiert"
+  },
+  "suggestion": {
+    "not_supported": "${server_name} unterstützt keine Suchvorschläge",
+    "suggested": "Vorgeschlagen auf ${server_name}",
+    "desc": "auf ${server_name}",
+    "empty": "Keine Tags, die mit '${query}' übereinstimmen",
+    "http_error": "Kein Ergebnis für '${query}' auf ${server_name}"
+  },
+  "action_tag": {
+    "copy": "Tag kopieren",
+    "block": "Ausgewählten Tag blockieren",
+    "blocked": "Zur Tags-Blockierung hinzugefügt",
+    "append": "Tag zur aktuellen Suche hinzufügen",
+    "search": "Tag suchen"
+  },
+  "updater": {
+    "check": "Nach Updates suchen",
+    "checking": "Suche nach Updates...",
+    "download": "Herunterladen ${version}",
+    "available": "Update verfügbar: ${version}",
+    "preparing": "Bereite Update vor...",
+    "on_latest": "Sie haben die neueste Version",
+    "on_new_version": "Neue Version ist verfügbar",
+    "install": "Update installieren",
+    "progress": "Herunterladen: ${progress}%"
+  },
+  "changelog": {
+    "title": "Änderungsprotokoll",
+    "view": "Änderungen anzeigen",
+    "none": "Kein Änderungsprotokoll verfügbar",
+    "whats_new": "Neu in ${version}"
+  },
+  "license": {
+    "package": "Paket: ${name}",
+    "title": {
+      "one": "Lizenz",
+      "other": "Lizenzen"
+    },
+    "counted": {
+      "one": "${n} Lizenz",
+      "other": "${n} Lizenzen"
+    }
+  },
+  "downloads": {
+    "title": "Downloads",
+    "no_file": "Datei wurde verschoben",
+    "redownload": "Erneut herunterladen",
+    "detail": "Details anzeigen",
+    "placeholder": "Ihre heruntergeladenen Dateien werden hier angezeigt",
+    "ungroup": "Gruppierung aufheben",
+    "group_by_server": "Nach Server gruppieren",
+    "no_permission": "Datei kann nicht heruntergeladen werden; fehlende Benachrichtigungsberechtigung",
+    "quality": "Download-Qualität",
+    "status": {
+      "empty": "Leer",
+      "pending": "Ausstehend",
+      "downloading": "Wird heruntergeladen",
+      "downloaded": "Heruntergeladen",
+      "failed": "Fehlgeschlagen",
+      "canceled": "Abgebrochen",
+      "paused": "Pausiert"
+    },
+    "filter_by_status": "Nach Status filtern",
+    "no_filter": "Kein Filter",
+    "clear_all": "Alle löschen",
+    "clear_all_warning": "Möchten Sie wirklich alle Download-Datensätze löschen?"
+  },
+  "favorites": {
+    "title": "Favoriten",
+    "placeholder": "Ihre gespeicherten Inhalte werden hier angezeigt"
+  },
+  "tags_blocker": {
+    "title": "Tags-Blockierung",
+    "desc": "Sie können mehrere Tags blockieren, indem Sie sie mit Leerzeichen trennen",
+    "empty": "Noch keine blockierten Tags",
+    "hint": "Beispiel: rotes_hemd blaue_schuhe"
+  },
+  "servers": {
+    "title": "Server",
+    "reset_warning": "Möchten Sie die Serverliste wirklich auf die Standardeinstellungen zurücksetzen?\n\nDadurch werden alle von Ihnen hinzugefügten Server gelöscht",
+    "remove_last_error": "Der letzte Server kann nicht entfernt werden",
+    "preset": "Aus Vorlage",
+    "select": "Server auswählen",
+    "add": "Neuen Server hinzufügen",
+    "edit": "Bearbeiten ${name}",
+    "alias": "Alias",
+    "homepage": "Startseite",
+    "homepage_hint": "Startseite, Beispiel: https://verycoolbooru.com",
+    "use_custom_api": "Benutzerdefinierte API-Adresse verwenden",
+    "use_custom_api_desc": "Nützlich, wenn der Server eine andere API-Adresse als die Startseite hat",
+    "addr_error": "Keine gültige Adresse",
+    "api_addr": "API-Adresse",
+    "api_addr_hint": "API-Adresse, Beispiel: https://api-v69.verycoolbooru.com",
+    "already_exists": "Serverdaten für ${name} existieren bereits",
+    "invalid_search_query": "Ungültige Suchanfrage",
+    "incompatible": "Kompatibler Parser für ${addr} konnte nicht gefunden werden",
+    "id": "ID",
+    "parser_type": {
+      "search": "Suchparser",
+      "suggestion": "Tag-Vorschlagsparser"
+    }
+  },
+  "server_query": {
+    "title": "Abfrage",
+    "search": "Suchabfrage",
+    "suggestion": "Tag-Vorschlagsabfrage",
+    "post": "Web-Post-Abfrage"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "interface": "Benutzeroberfläche",
+    "safe_mode": "Sicherheitsmodus",
+    "misc": "Verschiedenes",
+    "lang": {
+      "title": "Sprache",
+      "auto": "Systemsprache verwenden (falls möglich)"
+    },
+    "midnight_theme": {
+      "title": "Mitternachtsthema",
+      "desc": "Verwenden Sie dunklere Farben für den Dunkelmodus"
+    },
+    "ui_blur": {
+      "title": "Unschärfe aktivieren",
+      "desc": "Hintergrundunschärfe für verschiedene UI-Elemente aktivieren"
+    },
+    "hide_media": {
+      "title": "Heruntergeladene Medien ausblenden",
+      "desc": "Verhindern, dass externe Galerie-Apps heruntergeladene Dateien anzeigen"
+    },
+    "blur_content": {
+      "title": "Expliziten Inhalt ausblenden",
+      "desc": "Inhalt, der als explizit bewertet wurde, wird ausgeblendet"
+    },
+    "blur_timeline_only": {
+      "title": "Inhalt nur in der Timeline ausblenden",
+      "desc": "Explizit bewertete Inhalte werden im Anzeigemodus nicht ausgeblendet"
+    },
+    "ime_incognito": {
+      "title": "Tastatur im Inkognito-Modus",
+      "desc": "Inkognito-Modus für die Tastatur aktivieren, falls unterstützt."
+    },
+    "load_og": {
+      "title": "Originalinhalt anzeigen",
+      "desc": "Originaldatei anstelle der Beispieldatei laden, wenn der Beitrag geöffnet wird"
+    },
+    "post_limit": {
+      "title": "Maximaler Inhalt pro Ladevorgang",
+      "desc": "Das Ergebnis könnte geringer als erwartet ausfallen (verursacht durch blockierte Tags oder ungültige Daten)"
+    },
+    "clear_cache": {
+      "title": "Cache löschen",
+      "desc": "Geladenen Inhalt aus dem Cache löschen",
+      "done": "Cache gelöscht"
+    }
+  },
+  "data_backup": {
+    "title": "Sicherung und Wiederherstellung",
+    "desc": "App-Daten sichern und wiederherstellen",
+    "backup": {
+      "title": "Daten sichern",
+      "desc": "App-Daten in einer Datei sichern",
+      "success": "Sicherung erstellt unter:\n${dest}",
+      "loading": "Sicherung wird erstellt..."
+    },
+    "restore": {
+      "title": "Daten wiederherstellen",
+      "desc": "App-Daten aus einer Sicherungsdatei wiederherstellen",
+      "success": "App-Daten wurden wiederhergestellt",
+      "invalid": "Ungültige Sicherungsdatei",
+      "warning": "Warnung! Diese Aktion überschreibt alle vorhandenen Daten.\nMöchten Sie wirklich fortfahren?",
+      "loading": "Daten werden wiederhergestellt..."
+    }
+  }
+}
