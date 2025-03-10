@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/presentation/provider/download/download_state.dart';
 import 'package:boorusphere/presentation/provider/favorite_post_state.dart';
@@ -40,7 +41,7 @@ class PostToolbox extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           PostFavoriteButton(post: post),
-          PostDownloadButton(post: post),
+          if (FeatureFlags.enableDownload) PostDownloadButton(post: post),
           PostOpenLinkButton(post: post),
           PostDetailsButton(post: post),
         ],

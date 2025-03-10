@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/presentation/i18n/strings.g.dart';
 import 'package:boorusphere/presentation/provider/booru/post_headers_factory.dart';
@@ -243,7 +244,7 @@ class _ToolboxOverlay extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             PostFavoriteButton(post: post),
-            PostDownloadButton(post: post),
+            if (FeatureFlags.enableDownload) PostDownloadButton(post: post),
             IconButton(
               padding: const EdgeInsets.all(16),
               color: Colors.white,

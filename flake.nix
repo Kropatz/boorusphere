@@ -26,7 +26,7 @@
           mkShell rec {
             ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
             JAVA_HOME = "${jdk17}";
-            buildInputs = [ flutter androidSdk jdk17 dart ];
+            buildInputs = [ flutter androidSdk jdk17 dart xdg-user-dirs ];
             shellHook = ''
               export ANDROID_SDK_ROOT JAVA_HOME;
               flutter config --no-analytics;

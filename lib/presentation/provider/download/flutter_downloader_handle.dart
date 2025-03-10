@@ -1,6 +1,7 @@
 import 'dart:isolate';
 import 'dart:ui';
 
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/repository/downloads/entity/download_progress.dart';
 import 'package:boorusphere/data/repository/downloads/entity/download_status.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
@@ -10,6 +11,9 @@ part 'flutter_downloader_handle.g.dart';
 
 @Riverpod(keepAlive: true)
 FlutterDownloaderHandle downloaderHandle(DownloaderHandleRef ref) {
+  if(!FeatureFlags.enableDownload) {
+    return StubFlutterDownloaderHandle();
+  }
   final handle = FlutterDownloaderHandle();
   ref.onDispose(handle.dispose);
   return handle;
@@ -52,4 +56,12 @@ class FlutterDownloaderHandle {
   ) {
     IsolateNameServer.lookupPortByName(_name)?.send([id, status, progress]);
   }
+}
+
+class StubFlutterDownloaderHandle extends FlutterDownloaderHandle {
+  @override
+  void listen(void Function(DownloadProgress progress) onUpdate) {}
+
+  @override
+  void dispose() {}
 }

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/provider.dart';
 import 'package:boorusphere/domain/provider.dart';
 import 'package:boorusphere/presentation/i18n/helper.dart';
@@ -31,7 +32,7 @@ class Boorusphere extends HookConsumerWidget {
 
     final envRepo = ref.read(envRepoProvider);
     final appStateRepo = ref.read(appStateRepoProvider);
-    if (envRepo.appVersion.isNewerThan(appStateRepo.version)) {
+    if (envRepo.appVersion.isNewerThan(appStateRepo.version) && !Platform.isLinux) {
       await ref.read(appUpdaterProvider).clear();
     }
 
@@ -71,15 +72,18 @@ class Boorusphere extends HookConsumerWidget {
       LocaleHelper.update(locale);
     }, [locale]);
 
-    useEffect(() {
-      ref.read(downloaderHandleProvider).listen((progress) async {
-        if (progress.status.isDownloaded) {
-          await ref.read(sharedStorageHandleProvider).rescan();
-        }
+    if (FeatureFlags.enableDownload) {
+      useEffect(() {
+        ref.read(downloaderHandleProvider).listen((progress) async {
+          if (progress.status.isDownloaded) {
+            await ref.read(sharedStorageHandleProvider).rescan();
+          }
 
-        await ref.read(downloadProgressStateProvider.notifier).update(progress);
-      });
-    }, []);
+          await ref.read(downloadProgressStateProvider.notifier).update(
+              progress);
+        });
+      }, []);
+    }
 
     if (envRepo.sdkVersion > 28) {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
