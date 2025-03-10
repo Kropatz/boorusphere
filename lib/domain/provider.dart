@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:boorusphere/data/provider.dart';
 import 'package:boorusphere/data/repository/app_state/current_app_state_repo.dart';
 import 'package:boorusphere/data/repository/booru/booru_repo.dart';
@@ -7,6 +9,7 @@ import 'package:boorusphere/data/repository/downloads/entity/download_entry.dart
 import 'package:boorusphere/data/repository/downloads/entity/download_progress.dart';
 import 'package:boorusphere/data/repository/downloads/user_download_repo.dart';
 import 'package:boorusphere/data/repository/env/current_env_repo.dart';
+import 'package:boorusphere/data/repository/env/stub_env_repo.dart';
 import 'package:boorusphere/data/repository/favorite_post/entity/favorite_post.dart';
 import 'package:boorusphere/data/repository/favorite_post/user_favorite_post_repo.dart';
 import 'package:boorusphere/data/repository/search_history/entity/search_history.dart';
@@ -42,6 +45,9 @@ EnvRepo envRepo(EnvRepoRef ref) {
 }
 
 Future<EnvRepo> provideEnvRepo() async {
+  if (Platform.isLinux) {
+    return StubEnvRepo(env: Env(sdkVersion: 1, versionName: "1", versionCode: 99));
+  }
   return CurrentEnvRepo(env: await AppEnv().get());
 }
 

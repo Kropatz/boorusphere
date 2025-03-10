@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/presentation/i18n/strings.g.dart';
 import 'package:boorusphere/presentation/provider/app_updater.dart';
 import 'package:boorusphere/presentation/provider/app_versions/app_versions_state.dart';
@@ -87,7 +88,7 @@ class _Footer extends ConsumerWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         _HomeTile(),
-        ListTile(
+        if (FeatureFlags.enableDownload) ListTile(
           title: Text(context.t.downloads.title),
           leading: const Icon(Icons.cloud_download),
           onTap: () => context.router.push(DownloadsRoute(session: session)),

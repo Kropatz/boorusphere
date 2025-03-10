@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/pigeon/storage_util.pi.dart';
 import 'package:media_scanner/media_scanner.dart';
 import 'package:path/path.dart' as p;
@@ -14,6 +15,9 @@ SharedStorageHandle sharedStorageHandle(SharedStorageHandleRef ref) {
 }
 
 Future<SharedStorageHandle> provideSharedStorageHandle() async {
+  if (!FeatureFlags.enableDownload) {
+    return StubSharedStorageHandle();
+  }
   final downloadPath = await StorageUtil().getDownloadPath();
   return SharedStorageHandle(downloadPath: downloadPath);
 }
@@ -89,4 +93,30 @@ class SharedStorageHandle {
       // ignore: empty_catches
     } catch (e) {}
   }
+}
+
+class StubSharedStorageHandle extends SharedStorageHandle {
+  StubSharedStorageHandle() : super(downloadPath: '');
+
+  @override
+  Future<void> init() async {}
+
+  @override
+  Directory createSubDir(String directory) {
+    return Directory('');
+  }
+
+  @override
+  bool fileExists(String relativePath) {
+    return false;
+  }
+
+  @override
+  Future<void> rescan() async {}
+
+  @override
+  Future<void> hide(bool hide) async {}
+
+  @override
+  Future<void> open(String dest, {String? on}) async {}
 }

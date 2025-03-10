@@ -1,3 +1,4 @@
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/provider.dart';
 import 'package:boorusphere/data/repository/app_state/current_app_state_repo.dart';
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
@@ -49,7 +50,7 @@ void main() async {
     UserFavoritePostRepo.prepare(),
     UserSearchHistoryRepo.prepare(),
     UserSettingsRepo.prepare(),
-    UserDownloadsRepo.prepare(),
+    if (FeatureFlags.enableDownload) UserDownloadsRepo.prepare(),
     CurrentAppStateRepo.prepare(),
   ]);
 
