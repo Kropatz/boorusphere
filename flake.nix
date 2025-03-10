@@ -63,6 +63,7 @@
               jdk17
               dart
               pkgsCmake22.cmake
+              xdg-user-dirs
               run-emulator # uncomment to include the emulator in the dev shell
             ];
             shellHook = ''

@@ -1,3 +1,4 @@
+import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/data/repository/downloads/entity/download_entry.dart';
 import 'package:boorusphere/data/repository/downloads/entity/download_progress.dart';
@@ -54,6 +55,9 @@ class DownloadEntryState extends _$DownloadEntryState {
 class DownloadProgressState extends _$DownloadProgressState {
   @override
   Iterable<DownloadProgress> build() {
+    if(!FeatureFlags.enableDownload) {
+      return [];
+    }
     final repo = ref.read(downloadsRepoProvider);
     return repo.getProgresses();
   }
