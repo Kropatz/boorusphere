@@ -53,6 +53,7 @@ class ServerDetails extends HookConsumerWidget {
     final cPostUrl = useTextEditingController(text: server.postUrl);
     final cSearchParser = useState(server.searchParserId);
     final cSuggestionParser = useState(server.suggestionParserId);
+    final cUrlSuffix = useTextEditingController(text: server.urlSuffix);
 
     useEffect(() {
       cName.text = server.id;
@@ -62,6 +63,7 @@ class ServerDetails extends HookConsumerWidget {
       cPostUrl.text = server.postUrl;
       cSearchParser.value = server.searchParserId;
       cSuggestionParser.value = server.suggestionParserId;
+      cUrlSuffix.text = server.urlSuffix;
     }, [server]);
 
     openPresetPage() {
@@ -92,6 +94,7 @@ class ServerDetails extends HookConsumerWidget {
         postUrl: cPostUrl.text,
         searchParserId: cSearchParser.value,
         suggestionParserId: cSuggestionParser.value,
+        urlSuffix: cUrlSuffix.text,
       );
 
       onSubmitted.call(newData);
@@ -208,6 +211,18 @@ class ServerDetails extends HookConsumerWidget {
                   decoration: InputDecoration(
                     border: const UnderlineInputBorder(),
                     labelText: context.t.serverQuery.post,
+                  ),
+                ),
+                TextFormField(
+                  minLines: 1,
+                  maxLines: 3,
+                  controller: cUrlSuffix,
+                  enableIMEPersonalizedLearning: !imeIncognito,
+                  decoration: InputDecoration(
+                    border: const UnderlineInputBorder(),
+                    labelText: context.t.serverQuery.urlSuffix,
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                    hintText: '&api_key=key123&user_id=12345'
                   ),
                 ),
               ],
