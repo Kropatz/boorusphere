@@ -1,3 +1,7 @@
+## 1.4.10
+
+* Add easy way to append api key to server URLs
+
 ## 1.4.9
 
 * Add german translation - Thanks @LorenorZorro3000
