@@ -46,6 +46,16 @@
           includeNDK = true;
         };
         androidSdk = androidComposition.androidsdk;
+        emu = pkgs.androidenv.emulateApp {
+          name = "emulator-boorusphere";
+          platformVersion = "35";
+          abiVersion = "x86_64";
+          systemImageType = "google_apis_playstore";
+          configOptions = {
+            "hw.gpu.enabled" = "yes";
+          };
+        };
+        run-emulator = pkgs.writeShellScriptBin "run-emulator" ''${pkgs.steam-run}/bin/steam-run ${emu}/bin/run-test-emulator $@'';
       in
       {
         devShell =
@@ -60,6 +70,7 @@
               jdk17
               dart
               pkgsCmake22.cmake
+              #run-emulator #uncomment to include the emulator in the dev shell
             ];
             shellHook = ''
               export ANDROID_SDK_ROOT JAVA_HOME ANDROID_NDK_HOME;

@@ -53,7 +53,7 @@ android {
 
     sourceSets {
         //main.java.srcDairs += 'src/main/kotlin'
-        main.java.srcDirs = ['src/main/kotlin', 'src/main/java']
+        main.java.srcDirs += 'src/main/kotlin'
     }
 
     buildFeatures { 
