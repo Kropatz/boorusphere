@@ -75,8 +75,9 @@ class BooruScanner {
     String host, {
     required BooruParser parser,
     required _ScanType type,
+    Server? server,
   }) async {
-    final loadQuery = switch (type) {
+    String loadQuery = switch (type) {
       _ScanType.post => parser.postUrl,
       _ScanType.search => parser.searchQuery,
       _ScanType.suggestion => parser.suggestionQuery,
@@ -84,6 +85,10 @@ class BooruScanner {
 
     if (loadQuery.isEmpty || _cancelToken.isCancelled) {
       return _ScanResult.empty;
+    }
+
+    if (server != null && server.urlSuffix.isNotEmpty) {
+      loadQuery += server.urlSuffix;
     }
 
     final test = loadQuery
@@ -162,13 +167,13 @@ class BooruScanner {
   }
 
   Stream<_ScanResult> _performScans(String host,
-      {required _ScanType type}) async* {
+      {required _ScanType type, required Server server}) async* {
     final results = <_ScanResult>[];
     final requests = parsers.mapIndexed((i, parser) async {
       if (i > 0) {
         await Future.delayed(Duration(milliseconds: i * 100));
       }
-      return _scan(host, parser: parser, type: type);
+      return _scan(host, parser: parser, type: type, server: server);
     });
 
     await for (final result in Future.wait(requests).asStream()) {
@@ -209,7 +214,7 @@ class BooruScanner {
     try {
       _uilog('🧐 Scanning search query...');
       _cancelToken = CancelToken();
-      final search = _performScans(api, type: _ScanType.search);
+      final search = _performScans(api, type: _ScanType.search, server: server);
       await for (var ev in search) {
         if (ev == _ScanResult.empty && isScanning.value) {
           continue;
@@ -223,7 +228,7 @@ class BooruScanner {
       }
 
       _uilog('🧐 Scanning suggestion query...');
-      final suggestion = _performScans(api, type: _ScanType.suggestion);
+      final suggestion = _performScans(api, type: _ScanType.suggestion, server: server);
       await for (var ev in suggestion) {
         if (ev == _ScanResult.empty && isScanning.value) {
           continue;
@@ -237,7 +242,7 @@ class BooruScanner {
       }
 
       _uilog('🧐 Scanning web post query...');
-      final post = _performScans(home, type: _ScanType.post);
+      final post = _performScans(home, type: _ScanType.post, server: server);
       await for (var ev in post) {
         if (ev == _ScanResult.empty && isScanning.value) {
           continue;

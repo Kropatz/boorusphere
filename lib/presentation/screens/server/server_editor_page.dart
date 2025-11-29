@@ -61,6 +61,7 @@ class _ServerEditor extends HookConsumerWidget {
         text: isEditing ? _server.homepage : 'https://');
     final apiAddr = useTextEditingController(
         text: _server.apiAddr.isEmpty ? 'https://' : _server.apiAddr);
+    final cUrlSuffix = useTextEditingController(text: _server.urlSuffix);
 
     validateAddress(String? value) {
       if (value?.contains(RegExp(r'https?://.+\..+')) == false) {
@@ -88,6 +89,21 @@ class _ServerEditor extends HookConsumerWidget {
                   validator: validateAddress,
                 ),
               ),
+              if (!isEditing)
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16, top: 8),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 3,
+                    controller: cUrlSuffix,
+                    enableIMEPersonalizedLearning: !imeIncognito,
+                    decoration: InputDecoration(
+                        border: const UnderlineInputBorder(),
+                        labelText: context.t.serverQuery.urlSuffix,
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        hintText: '&api_key=key123&user_id=12345'),
+                  ),
+                ),
               CheckboxListTile(
                 value: useApiAddr.value,
                 title: Padding(
@@ -129,6 +145,7 @@ class _ServerEditor extends HookConsumerWidget {
                     final baseServer = server.value.copyWith(
                       homepage: homepage.text,
                       apiAddr: useApiAddr.value ? apiAddr.text : '',
+                      urlSuffix: cUrlSuffix.text,
                     );
                     final result =
                         await ScannerDialog.open(context, baseServer);
