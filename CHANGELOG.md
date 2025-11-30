@@ -1,3 +1,8 @@
+## 1.5.0
+
+* Update Flutter
+* Add ability to add an api key before scanning server
+
 ## 1.4.10
 
 * Add easy way to append api key to server URLs

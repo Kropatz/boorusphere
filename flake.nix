@@ -29,13 +29,6 @@
         androidComposition = pkgs.androidenv.composeAndroidPackages {
           buildToolsVersions = [ buildToolsVersion ];
           platformVersions = [
-            "31"
-            "30"
-            "34"
-            "33"
-            "32"
-            "29"
-            "27"
             "35"
           ];
           abiVersions = [
@@ -70,7 +63,7 @@
               jdk17
               dart
               pkgsCmake22.cmake
-              #run-emulator #uncomment to include the emulator in the dev shell
+              run-emulator #uncomment to include the emulator in the dev shell
             ];
             shellHook = ''
               export ANDROID_SDK_ROOT JAVA_HOME ANDROID_NDK_HOME;
