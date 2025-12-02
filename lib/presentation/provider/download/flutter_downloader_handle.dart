@@ -15,6 +15,7 @@ FlutterDownloaderHandle downloaderHandle(DownloaderHandleRef ref) {
   return handle;
 }
 
+@pragma('vm:entry-point')
 class FlutterDownloaderHandle {
   FlutterDownloaderHandle() {
     dispose();
