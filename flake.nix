@@ -41,7 +41,7 @@
         androidSdk = androidComposition.androidsdk;
         emu = pkgs.androidenv.emulateApp {
           name = "emulator-boorusphere";
-          platformVersion = "35";
+          platformVersion = "33";
           abiVersion = "x86_64";
           systemImageType = "google_apis_playstore";
           configOptions = {

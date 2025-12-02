@@ -1,3 +1,7 @@
+## 1.5.1
+
+* Maybe fix download issue
+
 ## 1.5.0
 
 * Update Flutter
