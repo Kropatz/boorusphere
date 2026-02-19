@@ -58,3 +58,6 @@ test/full_coverage_test.dart
 
 # Releases
 releasenote.md
+
+# Direnv
+.direnv

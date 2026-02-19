@@ -1,3 +1,7 @@
+## 1.5.2
+
+* Fix videos not playing from Gelbooru
+
 ## 1.5.1
 
 * Maybe fix download issue
