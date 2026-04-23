@@ -23,6 +23,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
+import 'package:restart_app/restart_app.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'data_backup.g.dart';
@@ -125,6 +126,7 @@ class DataBackupState extends _$DataBackupState {
 
     _invalidateProviders();
     state = const BackupResult.imported();
+    await Restart.restartApp();
   }
 
   Future<void> backup({BackupOption option = const BackupOption()}) async {
