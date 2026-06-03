@@ -35,7 +35,7 @@
             "armeabi-v7a"
             "arm64-v8a"
           ];
-          ndkVersions = [ "27.0.12077973" ];
+          ndkVersions = [ "28.2.13676358" ];
           includeNDK = true;
         };
         androidSdk = androidComposition.androidsdk;
@@ -48,14 +48,14 @@
             "hw.gpu.enabled" = "yes";
           };
         };
-        run-emulator = pkgs.writeShellScriptBin "run-emulator" ''${pkgs.steam-run}/bin/steam-run ${emu}/bin/run-test-emulator $@'';
+        run-emulator = pkgs.writeShellScriptBin "run-emulator" "${pkgs.steam-run}/bin/steam-run ${emu}/bin/run-test-emulator $@";
       in
       {
         devShell =
           with pkgs;
           mkShell rec {
             ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
-            ANDROID_NDK_HOME = "${androidSdk}/libexec/android-sdk/ndk/27.0.12077973";
+            ANDROID_NDK_HOME = "${androidSdk}/libexec/android-sdk/ndk/28.2.13676358";
             JAVA_HOME = "${jdk17}";
             buildInputs = [
               flutter
@@ -63,7 +63,7 @@
               jdk17
               dart
               pkgsCmake22.cmake
-              run-emulator #uncomment to include the emulator in the dev shell
+              run-emulator # uncomment to include the emulator in the dev shell
             ];
             shellHook = ''
               export ANDROID_SDK_ROOT JAVA_HOME ANDROID_NDK_HOME;
