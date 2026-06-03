@@ -10,6 +10,7 @@ abstract class BooruParser {
   String get postUrl => '';
   String get suggestionQuery => '';
   String get searchQuery => '';
+  int get pageOffset => 0;
   Map<String, String> get headers => {};
   Iterable<BooruParserType> get type;
   bool canParsePage(Response res) => false;

@@ -14,6 +14,9 @@ class E621JsonParser extends BooruParser {
   List<BooruParserType> get type => [BooruParserType.search];
 
   @override
+  int get pageOffset => 1;
+
+  @override
   bool canParsePage(Response res) {
     final data = res.data;
     return data is Map && data.keys.contains('posts');
