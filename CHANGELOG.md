@@ -1,3 +1,7 @@
+## 1.5.3
+
+* Fix e621 search returning an error
+
 ## 1.5.2
 
 * Fix videos not playing from Gelbooru
