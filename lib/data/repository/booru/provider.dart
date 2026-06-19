@@ -1,3 +1,4 @@
+import 'package:boorusphere/data/repository/booru/parser/anime_pictures_json_parser.dart';
 import 'package:boorusphere/data/repository/booru/parser/autocomplete.dart';
 import 'package:boorusphere/data/repository/booru/parser/booru_parser.dart';
 import 'package:boorusphere/data/repository/booru/parser/booruonrails_json_parser.dart';
@@ -18,6 +19,7 @@ part 'provider.g.dart';
 @Riverpod(keepAlive: true)
 List<BooruParser> booruParsers(BooruParsersRef ref) {
   return <BooruParser>[
+    AnimePicturesJsonParser(),
     AutocompleteJsonParser(),
     BooruOnRailsJsonParser(),
     DanbooruJsonParser(),

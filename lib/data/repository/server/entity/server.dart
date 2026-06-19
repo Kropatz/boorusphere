@@ -20,7 +20,7 @@ class Server with _$Server {
     @HiveField(8, defaultValue: '') @Default('') String alias,
     @HiveField(9, defaultValue: '') @Default('') String searchParserId,
     @HiveField(10, defaultValue: '') @Default('') String suggestionParserId,
-    @HiveField(11, defaultValue: '') @Default('') String urlSuffix ,
+    @HiveField(11, defaultValue: '') @Default('') String urlSuffix,
   }) = _Server;
 
   factory Server.fromJson(Map<String, dynamic> json) => _$ServerFromJson(json);
@@ -32,6 +32,10 @@ class Server with _$Server {
   String searchUrlOf(PageOption option, {required int page}) {
     final query = option.query.trim();
     var tags = query.isEmpty ? Server.defaultTag : query;
+    if (query.isEmpty && searchUrl.contains("api/v3/posts")) {
+      // anime-pictures uses empty tag as get all
+      tags = '';
+    }
     if (searchUrl.toUri().queryParameters.containsKey('offset')) {
       // Szurubooru has exclusive-way (but still same shit) of rating
       tags += ' ${_szuruRateString(option.searchRating)}';
@@ -50,8 +54,9 @@ class Server with _$Server {
         .replaceAll('{post-limit}', '${option.limit}');
   }
 
-  String suggestionUrlsOf(String query) {
-    final url = '$homepage/$tagSuggestionUrl$urlSuffix'
+  String suggestionUrlsOf(String query, {bool useApiUrl = false}) {
+    String host = useApiUrl ? apiAddress : homepage;
+    final url = '$host/$tagSuggestionUrl$urlSuffix'
         .replaceAll('{post-limit}', '$tagSuggestionLimit')
         .replaceAll('{tag-limit}', '$tagSuggestionLimit');
 

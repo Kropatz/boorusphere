@@ -36,7 +36,7 @@ class BooruRepo implements ImageboardRepo {
     var parser = parsers.firstWhere((x) => x.id == server.suggestionParserId,
         orElse: NoParser.new);
 
-    final suggestionUrl = server.suggestionUrlsOf(word);
+    final suggestionUrl = server.suggestionUrlsOf(word, useApiUrl: parser.id == 'AnimePictures.json');
     final res = await _request(suggestionUrl, parser);
 
     if (parser.canParseSuggestion(res)) {
