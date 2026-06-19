@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
+import 'package:boorusphere/presentation/utils/extensions/images.dart';
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,8 @@ class PostPlaceholderImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ExtendedImage.network(
-      post.previewFile,
-      headers: headers,
+    return ExtendedImage(
+      image: contentImageProvider(post.previewFile, headers: headers),
       fit: BoxFit.contain,
       enableLoadState: false,
       beforePaintImage: (canvas, rect, image, paint) {

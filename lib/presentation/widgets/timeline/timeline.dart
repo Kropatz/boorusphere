@@ -136,15 +136,17 @@ class _ThumbnailImage extends ConsumerWidget {
 
     final image = AspectRatio(
       aspectRatio: isLong ? 0.5 : post.aspectRatio,
-      child: ExtendedImage.network(
-        // load sample photo when it's above 35:9
-        post.aspectRatio < 0.26 && post.sampleFile.asContent().isPhoto
-            ? post.sampleFile
-            : post.previewFile,
-        headers: headers,
+      child: ExtendedImage(
+        image: contentImageProvider(
+          // load sample photo when it's above 35:9
+          post.aspectRatio < 0.26 && post.sampleFile.asContent().isPhoto
+              ? post.sampleFile
+              : post.previewFile,
+          headers: headers,
+          cacheWidth: cacheWidth.round(),
+          cacheHeight: cacheHeight.round(),
+        ),
         fit: BoxFit.cover,
-        cacheWidth: cacheWidth.round(),
-        cacheHeight: cacheHeight.round(),
         enableLoadState: false,
         beforePaintImage: (canvas, rect, image, paint) {
           if (blurExplicit && post.rating.isExplicit) {

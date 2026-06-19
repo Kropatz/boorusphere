@@ -1,8 +1,8 @@
 import 'package:boorusphere/data/repository/booru/entity/post.dart';
 import 'package:boorusphere/presentation/provider/booru/post_headers_factory.dart';
+import 'package:boorusphere/presentation/utils/extensions/images.dart';
 import 'package:boorusphere/presentation/utils/extensions/post.dart';
 import 'package:collection/collection.dart';
-import 'package:extended_image/extended_image.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -35,11 +35,9 @@ class _PrecachePostsState extends HookState<_Precacher, _PrecachePostsHook> {
 
   Future<void> _precacheImagePost(Post post, bool og) async {
     if (!post.content.isPhoto || !context.mounted) return;
-    final image = ExtendedNetworkImageProvider(
+    final image = contentImageProvider(
       og ? post.originalFile : post.content.url,
       headers: hook.ref.read(postHeadersFactoryProvider(post)),
-      cache: true,
-      retries: 3,
     );
     final status = await image.obtainCacheStatus(
       configuration: ImageConfiguration.empty,

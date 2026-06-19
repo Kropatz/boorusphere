@@ -11,7 +11,6 @@ import 'package:boorusphere/presentation/utils/extensions/images.dart';
 import 'package:boorusphere/presentation/utils/extensions/post.dart';
 import 'package:boorusphere/presentation/widgets/styled_overlay_region.dart';
 import 'package:boorusphere/utils/extensions/string.dart';
-import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -87,9 +86,8 @@ class PostDetailsPage extends HookConsumerWidget with ClipboardMixins {
                   title: Text(context.t.fileSample),
                   subtitle: FutureBuilder<PixelSize>(
                     future: post.content.isPhoto && !post.sampleSize.hasPixels
-                        ? ExtendedNetworkImageProvider(
+                        ? contentImageProvider(
                             post.sampleFile,
-                            cache: true,
                             headers: headers,
                           ).resolvePixelSize()
                         : Future.value(post.sampleSize),

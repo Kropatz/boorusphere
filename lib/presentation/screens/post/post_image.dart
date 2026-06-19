@@ -59,12 +59,15 @@ class PostImage extends HookConsumerWidget {
         children: [
           Hero(
             tag: post.viewId,
-            child: ExtendedImage.network(
-              contentSetting.loadOriginal
-                  ? post.originalFile
-                  : post.content.url,
-              headers: headers,
+            child: ExtendedImage(
+              image: contentImageProvider(
+                contentSetting.loadOriginal
+                    ? post.originalFile
+                    : post.content.url,
+                headers: headers,
+              ),
               fit: BoxFit.contain,
+              enableLoadState: true,
               mode: isBlur.value
                   ? ExtendedImageMode.none
                   : ExtendedImageMode.gesture,
