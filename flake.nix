@@ -49,28 +49,59 @@
           };
         };
         run-emulator = pkgs.writeShellScriptBin "run-emulator" "${pkgs.steam-run}/bin/steam-run ${emu}/bin/run-test-emulator $@";
+        includeAndroid = false;
+        includeLinux = true;
       in
       {
         devShell =
           with pkgs;
           mkShell rec {
-            ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
-            ANDROID_NDK_HOME = "${androidSdk}/libexec/android-sdk/ndk/28.2.13676358";
-            JAVA_HOME = "${jdk17}";
             buildInputs = [
               flutter
+              dart
+            ]
+            ++ lib.optionals includeAndroid [
               androidSdk
               jdk17
-              dart
               pkgsCmake22.cmake
+              #run-emulator # uncomment to include the emulator in the dev shell
+            ]
+            ++ lib.optionals includeLinux [
               xdg-user-dirs
-              run-emulator # uncomment to include the emulator in the dev shell
+              libpulseaudio
             ];
-            shellHook = ''
-              export ANDROID_SDK_ROOT JAVA_HOME ANDROID_NDK_HOME;
-              flutter config --no-analytics;
-              flutter config --jdk-dir=$JAVA_HOME;
-            '';
+            shellHook = lib.concatLines [
+              ''
+                export ANDROID_SDK_ROOT JAVA_HOME ANDROID_NDK_HOME;
+                flutter config --no-analytics;
+                flutter config --jdk-dir=$JAVA_HOME;
+              ''
+              (
+                if includeLinux then
+                  ''
+                    export LD_LIBRARY_PATH=${
+                      lib.makeLibraryPath [
+                        libpulseaudio
+                        alsa-lib
+                        lz4.lib
+                        libGL
+                        libX11
+                        libgbm
+                        libdrm
+                        libva
+                        libvdpau
+                      ]
+                    }:$LD_LIBRARY_PATH
+                  ''
+                else
+                  ""
+              )
+            ];
+          }
+          // lib.optionalAttrs includeAndroid {
+            JAVA_HOME = "${jdk17}";
+            ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
+            ANDROID_NDK_HOME = "${androidSdk}/libexec/android-sdk/ndk/28.2.13676358";
           };
       }
     );
