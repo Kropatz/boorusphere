@@ -4,6 +4,8 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   dynamic_color
+  fvp
+  restart_app
   url_launcher_linux
 )
 

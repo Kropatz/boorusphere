@@ -81,6 +81,7 @@ dependencies:
   extended_image: ^8.2.0
   wakelock_plus: ^1.2.8
   restart_app: ^1.7.3
+  fvp: ^0.37.2
 
 dev_dependencies:
   flutter_test:

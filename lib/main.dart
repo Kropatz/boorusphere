@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:boorusphere/constant/feature-flags.dart';
 import 'package:boorusphere/data/provider.dart';
 import 'package:boorusphere/data/repository/app_state/current_app_state_repo.dart';
@@ -24,14 +26,17 @@ import 'package:boorusphere/presentation/provider/settings/entity/download_quali
 import 'package:boorusphere/presentation/provider/shared_storage_handle.dart';
 import 'package:boorusphere/presentation/utils/device_workarounds.dart';
 import 'package:boorusphere/utils/logger.dart';
+import 'package:boorusphere/utils/platform.dart';
 import 'package:flutter/material.dart';
+import 'package:fvp/fvp.dart' as fvp;
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() async {
   setupLogger();
-  WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
+
+  fvp.registerWith();
+  await Hive.initFlutter(PlatformUtils.getDataPath());
 
   Hive.registerAdapter(ServerAdapter());
   Hive.registerAdapter(BooruTagAdapter());

@@ -73,7 +73,9 @@ class DataBackupState extends _$DataBackupState {
 
   Future<void> restore({Future<bool?> Function()? onConfirm}) async {
     final backupsDir = await _backupDir();
-    await FilePicker.platform.clearTemporaryFiles();
+    if (!Platform.isLinux){
+      await FilePicker.platform.clearTemporaryFiles();
+    }
 
     final result = await FilePicker.platform.pickFiles(
       initialDirectory: backupsDir.absolute.path,
