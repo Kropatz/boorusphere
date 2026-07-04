@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:boorusphere/data/repository/booru/entity/booru_error.dart';
 import 'package:boorusphere/data/repository/server/entity/server.dart';
 import 'package:boorusphere/presentation/i18n/strings.g.dart';
@@ -9,6 +10,7 @@ import 'package:boorusphere/presentation/provider/booru/page_state.dart';
 import 'package:boorusphere/presentation/provider/server_data_state.dart';
 import 'package:boorusphere/presentation/provider/settings/entity/booru_rating.dart';
 import 'package:boorusphere/presentation/provider/settings/server_setting_state.dart';
+import 'package:boorusphere/presentation/routes/app_router.gr.dart';
 import 'package:boorusphere/presentation/screens/home/search_session.dart';
 import 'package:boorusphere/presentation/utils/extensions/strings.dart';
 import 'package:boorusphere/presentation/widgets/error_info.dart';
@@ -88,6 +90,7 @@ class _ErrorStatus extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final session = ref.watch(searchSessionProvider);
     final server = ref.watch(serverStateProvider).getById(session.serverId);
+    final e = error;
 
     return Center(
       child: NoticeCard(
@@ -102,18 +105,33 @@ class _ErrorStatus extends ConsumerWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (data.option.searchRating == BooruRating.safe)
-                  ElevatedButton(
-                    onPressed: () async {
-                      await ref
-                          .read(serverSettingStateProvider.notifier)
-                          .setRating(BooruRating.all);
-                      if (context.mounted) {
-                        unawaited(ref.read(pageStateProvider.notifier).load());
-                      }
-                    },
-                    child: Text(context.t.rating.disableRatingSafe),
-                  ),
+                Builder(
+                  builder: (context) {
+                    if (e is DioException && e.response?.statusCode == 401) {
+                      return ElevatedButton(
+                        onPressed: () {
+                          context.router
+                              .push(ServerEditorRoute(server: server));
+                        },
+                        child: Text(context.t.servers.addApiKey),
+                      );
+                    } else if (data.option.searchRating == BooruRating.safe) {
+                      return ElevatedButton(
+                        onPressed: () async {
+                          await ref
+                              .read(serverSettingStateProvider.notifier)
+                              .setRating(BooruRating.all);
+                          if (context.mounted) {
+                            unawaited(
+                                ref.read(pageStateProvider.notifier).load());
+                          }
+                        },
+                        child: Text(context.t.rating.disableRatingSafe),
+                      );
+                    }
+                    return const SizedBox.shrink();
+                  },
+                ),
                 ElevatedButton(
                   onPressed: ref.read(pageStateProvider.notifier).load,
                   child: Text(context.t.retry),

@@ -149,6 +149,7 @@
     "preset": "From Preset",
     "select": "Select Server",
     "add": "Add new server",
+    "add_api_key": "Add API key",
     "edit": "Edit ${name}",
     "alias": "Alias",
     "homepage": "Homepage",
