@@ -10,7 +10,7 @@ subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
     afterEvaluate {
         android {
-            compileSdkVersion 35
+            compileSdkVersion 36
         }
     }
 }

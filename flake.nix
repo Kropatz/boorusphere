@@ -25,11 +25,11 @@
         pkgsCmake22 = import nixpkgs-cmake22 {
           inherit system;
         };
-        buildToolsVersion = "34.0.0";
+        buildToolsVersion = "35.0.0";
         androidComposition = pkgs.androidenv.composeAndroidPackages {
           buildToolsVersions = [ buildToolsVersion ];
           platformVersions = [
-            "35"
+            "36"
           ];
           abiVersions = [
             "armeabi-v7a"
