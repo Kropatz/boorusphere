@@ -1,3 +1,8 @@
+## 1.5.4
+* Update dependencies
+* perf: move calculating filtered posts to load time
+* Add hint to add API key on 401
+
 ## 1.5.3
 
 * Fix e621 search returning an error
