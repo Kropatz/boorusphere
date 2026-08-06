@@ -24,12 +24,17 @@ class PageState extends _$PageState {
 
   final SearchSession session;
   final _posts = <Post>[];
+  final _filteredPosts = <Post>[];
   int _page = 0;
 
   @override
   FetchResult<PageData> build() {
     _page = 0;
     _posts.clear();
+    _filteredPosts.clear();
+    ref.listen(tagsBlockerStateProvider, (prev, next) {
+      refreshBlockedTags();
+    });
     return const FetchResult.idle(PageData());
   }
 
@@ -43,6 +48,18 @@ class PageState extends _$PageState {
         .values
         .where((it) => it.serverId.isEmpty || it.serverId == _server.id)
         .map((it) => it.name);
+  }
+
+  void refreshBlockedTags() {
+    final blocked = blockedTags.toSet();
+    _filteredPosts
+      ..clear()
+      ..addAll(_posts.where((it) => !it.allTags.any(blocked.contains)));
+
+    if (state is! DataFetchResult) return;
+
+    state = FetchResult.data(state.data
+        .copyWith(posts: _posts, filteredPosts: List.of(_filteredPosts)));
   }
 
   Future<void> update(PageOption Function(PageOption) updater) async {
@@ -72,10 +89,12 @@ class PageState extends _$PageState {
     if (option.clear) {
       _page = 0;
       _posts.clear();
+      _filteredPosts.clear();
     }
 
     state = FetchResult.loading(
-      state.data.copyWith(posts: _posts, option: option),
+      state.data.copyWith(
+          posts: _posts, filteredPosts: _filteredPosts, option: option),
     );
 
     try {
@@ -91,11 +110,14 @@ class PageState extends _$PageState {
 
         final posts =
             res.where((it) => !_posts.any((post) => post.id == it.id));
-        final displayedPosts =
-            posts.where((it) => !it.allTags.any(blockedTags.contains));
+        final displayedPosts = <Post>[];
+        displayedPosts
+            .addAll(posts.where((it) => !it.allTags.any(blockedTags.contains)));
         if (displayedPosts.isNotEmpty) {
           _posts.addAll(posts);
-          state = FetchResult.data(state.data.copyWith(posts: _posts));
+          _filteredPosts.addAll(displayedPosts);
+          state = FetchResult.data(state.data
+              .copyWith(posts: _posts, filteredPosts: _filteredPosts));
           break;
         }
 
