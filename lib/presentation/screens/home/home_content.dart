@@ -3,12 +3,10 @@ import 'dart:async';
 import 'package:boorusphere/presentation/provider/booru/entity/fetch_result.dart';
 import 'package:boorusphere/presentation/provider/booru/page_state.dart';
 import 'package:boorusphere/presentation/provider/server_data_state.dart';
-import 'package:boorusphere/presentation/provider/tags_blocker_state.dart';
 import 'package:boorusphere/presentation/screens/home/home_status.dart';
 import 'package:boorusphere/presentation/screens/home/search/search_screen.dart';
 import 'package:boorusphere/presentation/screens/home/search_session.dart';
 import 'package:boorusphere/presentation/utils/extensions/buildcontext.dart';
-import 'package:boorusphere/presentation/utils/extensions/post.dart';
 import 'package:boorusphere/presentation/widgets/timeline/timeline.dart';
 import 'package:boorusphere/presentation/widgets/timeline/timeline_controller.dart';
 import 'package:flutter/material.dart';
@@ -23,14 +21,8 @@ class HomeContent extends HookConsumerWidget {
     final pageState = ref.watch(pageStateProvider);
     final session = ref.watch(searchSessionProvider);
     final servers = ref.watch(serverStateProvider);
-    final blockedTags = ref.watch(tagsBlockerStateProvider.select(
-      (state) => state.values
-          .where((it) => it.serverId.isEmpty || it.serverId == session.serverId)
-          .map((it) => it.name),
-    ));
 
-    final filteredPosts = pageState.data.posts
-        .where((it) => !it.allTags.any(blockedTags.contains));
+    final filteredPosts = pageState.data.filteredPosts;
 
     useEffect(() {
       if (servers.isNotEmpty) {

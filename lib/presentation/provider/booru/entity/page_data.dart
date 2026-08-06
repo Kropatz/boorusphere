@@ -9,5 +9,6 @@ class PageData with _$PageData {
   const factory PageData({
     @Default(PageOption(clear: true)) PageOption option,
     @Default(<Post>[]) List<Post> posts,
+    @Default(<Post>[]) List<Post> filteredPosts,
   }) = _PageData;
 }
