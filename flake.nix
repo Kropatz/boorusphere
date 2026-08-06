@@ -56,6 +56,9 @@
         devShell =
           with pkgs;
           mkShell rec {
+            nativeBuildInputs = [
+              pkg-config
+            ];
             buildInputs = [
               flutter
               dart
@@ -69,12 +72,13 @@
             ++ lib.optionals includeLinux [
               xdg-user-dirs
               libpulseaudio
+              pkg-config
+              wayland.dev
+              libepoxy
             ];
             shellHook = lib.concatLines [
               ''
-                export ANDROID_SDK_ROOT JAVA_HOME ANDROID_NDK_HOME;
                 flutter config --no-analytics;
-                flutter config --jdk-dir=$JAVA_HOME;
               ''
               (
                 if includeLinux then
@@ -96,12 +100,18 @@
                 else
                   ""
               )
+              (
+                if includeAndroid then
+                  ''
+                    export JAVA_HOME=${jdk17};
+                    export ANDROID_SDK_ROOT=${androidSdk}/libexec/android-sdk;
+                    export ANDROID_NDK_HOME=${androidSdk}/libexec/android-sdk/ndk/28.2.13676358;
+                    flutter config --jdk-dir=$JAVA_HOME;
+                  ''
+                else
+                  ""
+              )
             ];
-          }
-          // lib.optionalAttrs includeAndroid {
-            JAVA_HOME = "${jdk17}";
-            ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
-            ANDROID_NDK_HOME = "${androidSdk}/libexec/android-sdk/ndk/28.2.13676358";
           };
       }
     );
