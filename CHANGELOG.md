@@ -1,3 +1,6 @@
+## 1.5.5
+* fix e621
+
 ## 1.5.4
 * Update dependencies
 * perf: move calculating filtered posts to load time
