@@ -1,598 +1,640 @@
-{
-    "posts": [
-        {
-            "id": 4113756,
-            "created_at": "2023-06-16T07:03:24.085-04:00",
-            "updated_at": "2023-06-16T07:11:06.404-04:00",
-            "file": {
-                "width": 1280,
-                "height": 610,
-                "ext": "jpg",
-                "size": 198663,
-                "md5": "223f6f1677bffe32fb8d284ebe8ac280",
-                "url": "https://static1.e621.net/data/22/3f/223f6f1677bffe32fb8d284ebe8ac280.jpg"
-            },
-            "preview": {
-                "width": 150,
-                "height": 71,
-                "url": "https://static1.e621.net/data/preview/22/3f/223f6f1677bffe32fb8d284ebe8ac280.jpg"
-            },
-            "sample": {
-                "has": true,
-                "height": 405,
-                "width": 850,
-                "url": "https://static1.e621.net/data/sample/22/3f/223f6f1677bffe32fb8d284ebe8ac280.jpg",
-                "alternates": {}
-            },
-            "score": {
-                "up": 0,
-                "down": 0,
-                "total": 0
-            },
-            "tags": {
-                "general": [
-                    "anthro",
-                    "arm_markings",
-                    "black_markings",
-                    "bottomwear",
-                    "cheek_tuft",
-                    "clothing",
-                    "dress",
-                    "ear_piercing",
-                    "ear_ring",
-                    "facial_tuft",
-                    "female",
-                    "fur",
-                    "headgear",
-                    "headwear",
-                    "leg_markings",
-                    "markings",
-                    "multicolored_body",
-                    "multicolored_fur",
-                    "open_mouth",
-                    "piercing",
-                    "ring",
-                    "ring_piercing",
-                    "russian",
-                    "sharp_teeth",
-                    "skirt",
-                    "smile",
-                    "solo",
-                    "teeth",
-                    "text",
-                    "traditional_dress",
-                    "tuft",
-                    "yellow_eyes"
-                ],
-                "species": [
-                    "canid",
-                    "canine",
-                    "fox",
-                    "mammal"
-                ],
-                "character": [
-                    "lisa_patrikeevna"
-                ],
-                "copyright": [
-                    "three_ruble_kingdom"
-                ],
-                "artist": [
-                    "maria_volkova"
-                ],
-                "invalid": [],
-                "lore": [],
-                "meta": [
-                    "2023",
-                    "model_sheet",
-                    "russian_text"
-                ]
-            },
-            "locked_tags": [],
-            "change_seq": 49328105,
-            "flags": {
-                "pending": true,
-                "flagged": false,
-                "note_locked": false,
-                "status_locked": false,
-                "rating_locked": false,
-                "deleted": false
-            },
-            "rating": "s",
-            "fav_count": 1,
-            "sources": [
-                "https://vk.com/wall-220024753_7",
-                "https://vk.com/3rublekingdom",
-                "https://sun9-75.userapi.com/impg/d1qZOI5kFoFnel2RDYiC-g5JzKiXdDyH4AJcTQ/9ji_RAE9_J4.jpg?size=1280x610&quality=95&sign=8b517717fca9a2b8fad77b799415f402&type=album"
-            ],
-            "pools": [],
-            "relationships": {
-                "parent_id": null,
-                "has_children": false,
-                "has_active_children": false,
-                "children": []
-            },
-            "approver_id": null,
-            "uploader_id": 87066,
-            "description": "https://vk.com/3rublekingdom",
-            "comment_count": 0,
-            "is_favorited": false,
-            "has_notes": false,
-            "duration": null
-        },
-        {
-            "id": 4113752,
-            "created_at": "2023-06-16T06:55:38.864-04:00",
-            "updated_at": "2023-06-16T07:18:35.426-04:00",
-            "file": {
-                "width": 2355,
-                "height": 1859,
-                "ext": "jpg",
-                "size": 377342,
-                "md5": "70c541b7ad7230a9410c67ee894f7ca1",
-                "url": "https://static1.e621.net/data/70/c5/70c541b7ad7230a9410c67ee894f7ca1.jpg"
-            },
-            "preview": {
-                "width": 150,
-                "height": 118,
-                "url": "https://static1.e621.net/data/preview/70/c5/70c541b7ad7230a9410c67ee894f7ca1.jpg"
-            },
-            "sample": {
-                "has": true,
-                "height": 670,
-                "width": 850,
-                "url": "https://static1.e621.net/data/sample/70/c5/70c541b7ad7230a9410c67ee894f7ca1.jpg",
-                "alternates": {}
-            },
-            "score": {
-                "up": 5,
-                "down": 0,
-                "total": 5
-            },
-            "tags": {
-                "general": [
-                    "anthro",
-                    "breasts",
-                    "clothed",
-                    "clothing",
-                    "female",
-                    "female_anthro",
-                    "floppy_ears",
-                    "fur",
-                    "hair",
-                    "kemono",
-                    "long_hair",
-                    "piercing",
-                    "small_breasts",
-                    "solo",
-                    "tattoo"
-                ],
-                "species": [
-                    "canid",
-                    "canine",
-                    "canis",
-                    "domestic_dog",
-                    "mammal",
-                    "spitz"
-                ],
-                "character": [
-                    "apogee_(tinygaypirate)"
-                ],
-                "copyright": [],
-                "artist": [
-                    "tinygaypirate"
-                ],
-                "invalid": [],
-                "lore": [],
-                "meta": [
-                    "2023",
-                    "digital_media_(artwork)",
-                    "hi_res"
-                ]
-            },
-            "locked_tags": [],
-            "change_seq": 49328087,
-            "flags": {
-                "pending": false,
-                "flagged": false,
-                "note_locked": false,
-                "status_locked": false,
-                "rating_locked": true,
-                "deleted": false
-            },
-            "rating": "s",
-            "fav_count": 16,
-            "sources": [
-                "https://twitter.com/tinygaypirate/status/1669418323107299342",
-                "https://pbs.twimg.com/media/Fyr3GpuWwAA5GJ0?format=jpg&name=orig"
-            ],
-            "pools": [],
-            "relationships": {
-                "parent_id": null,
-                "has_children": false,
-                "has_active_children": false,
-                "children": []
-            },
-            "approver_id": null,
-            "uploader_id": 370094,
-            "description": "",
-            "comment_count": 0,
-            "is_favorited": false,
-            "has_notes": false,
-            "duration": null
-        },
-        {
-            "id": 4113742,
-            "created_at": "2023-06-16T06:43:41.214-04:00",
-            "updated_at": "2023-06-16T07:18:17.008-04:00",
-            "file": {
-                "width": 720,
-                "height": 1280,
-                "ext": "webm",
-                "size": 1817868,
-                "md5": "1436d23a4e5c8284cd36cac7e4c99f01",
-                "url": "https://static1.e621.net/data/14/36/1436d23a4e5c8284cd36cac7e4c99f01.webm"
-            },
-            "preview": {
-                "width": 84,
-                "height": 150,
-                "url": "https://static1.e621.net/data/preview/14/36/1436d23a4e5c8284cd36cac7e4c99f01.jpg"
-            },
-            "sample": {
-                "has": true,
-                "height": 1280,
-                "width": 720,
-                "url": "https://static1.e621.net/data/sample/14/36/1436d23a4e5c8284cd36cac7e4c99f01.jpg",
-                "alternates": {
-                    "720p": {
-                        "type": "video",
-                        "height": 720,
-                        "width": 404,
-                        "urls": [
-                            "https://static1.e621.net/data/sample/14/36/1436d23a4e5c8284cd36cac7e4c99f01_720p.webm",
-                            "https://static1.e621.net/data/sample/14/36/1436d23a4e5c8284cd36cac7e4c99f01_720p.mp4"
-                        ]
-                    },
-                    "480p": {
-                        "type": "video",
-                        "height": 480,
-                        "width": 270,
-                        "urls": [
-                            "https://static1.e621.net/data/sample/14/36/1436d23a4e5c8284cd36cac7e4c99f01_480p.webm",
-                            "https://static1.e621.net/data/sample/14/36/1436d23a4e5c8284cd36cac7e4c99f01_480p.mp4"
-                        ]
-                    },
-                    "original": {
-                        "type": "video",
-                        "height": 1280,
-                        "width": 720,
-                        "urls": [
-                            null,
-                            "https://static1.e621.net/data/14/36/1436d23a4e5c8284cd36cac7e4c99f01.mp4"
-                        ]
-                    }
-                }
-            },
-            "score": {
-                "up": 2,
-                "down": -38,
-                "total": -36
-            },
-            "tags": {
-                "general": [
-                    "cellphone",
-                    "commercial",
-                    "duo",
-                    "female",
-                    "iphone_5s",
-                    "male",
-                    "male/female",
-                    "phone",
-                    "smartphone"
-                ],
-                "species": [
-                    "human",
-                    "humanoid",
-                    "mammal"
-                ],
-                "character": [],
-                "copyright": [
-                    "apple_inc.",
-                    "iphone",
-                    "lady_gaga"
-                ],
-                "artist": [],
-                "invalid": [],
-                "lore": [],
-                "meta": [
-                    "2013",
-                    "animated",
-                    "hi_res",
-                    "webm"
-                ]
-            },
-            "locked_tags": [],
-            "change_seq": 49328032,
-            "flags": {
-                "pending": true,
-                "flagged": true,
-                "note_locked": false,
-                "status_locked": false,
-                "rating_locked": false,
-                "deleted": false
-            },
-            "rating": "s",
-            "fav_count": 3,
-            "sources": [],
-            "pools": [],
-            "relationships": {
-                "parent_id": null,
-                "has_children": false,
-                "has_active_children": false,
-                "children": []
-            },
-            "approver_id": null,
-            "uploader_id": 1555282,
-            "description": "I Live in a Applause Applause!\r\nA-R-T-P-O-P",
-            "comment_count": 5,
-            "is_favorited": false,
-            "has_notes": false,
-            "duration": 17.655
-        },
-        {
-            "id": 4113725,
-            "created_at": "2023-06-16T06:16:37.792-04:00",
-            "updated_at": "2023-06-16T07:19:16.384-04:00",
-            "file": {
-                "width": 2625,
-                "height": 1900,
-                "ext": "jpg",
-                "size": 570141,
-                "md5": "eaac3ec849a2c4a0013432bd66a6fe54",
-                "url": "https://static1.e621.net/data/ea/ac/eaac3ec849a2c4a0013432bd66a6fe54.jpg"
-            },
-            "sample": {
-                "has": true,
-                "height": 615,
-                "width": 850,
-                "url": "https://static1.e621.net/data/sample/ea/ac/eaac3ec849a2c4a0013432bd66a6fe54.jpg",
-                "alternates": {}
-            },
-            "score": {
-                "up": 16,
-                "down": 0,
-                "total": 16
-            },
-            "tags": {
-                "general": [
-                    "5_fingers",
-                    "anthro",
-                    "armwear",
-                    "barefoot",
-                    "black_nose",
-                    "breasts",
-                    "clenched_teeth",
-                    "clothed",
-                    "clothing",
-                    "collar",
-                    "dress",
-                    "ear_piercing",
-                    "ear_ring",
-                    "eyebrows",
-                    "eyelashes",
-                    "eyeshadow",
-                    "feet",
-                    "female",
-                    "fingers",
-                    "fluffy",
-                    "fluffy_tail",
-                    "fur",
-                    "glistening",
-                    "glistening_clothing",
-                    "hair",
-                    "holding_object",
-                    "long_hair",
-                    "looking_at_viewer",
-                    "makeup",
-                    "notched_ear",
-                    "piercing",
-                    "pupils",
-                    "raised_arm",
-                    "red_sclera",
-                    "ring_piercing",
-                    "simple_background",
-                    "sitting",
-                    "slit_pupils",
-                    "solo",
-                    "spiked_collar",
-                    "spikes",
-                    "tail",
-                    "teeth",
-                    "whip",
-                    "white_hair"
-                ],
-                "species": [
-                    "canid",
-                    "canid_demon",
-                    "canine",
-                    "demon",
-                    "hellhound",
-                    "mammal"
-                ],
-                "character": [
-                    "loona_(helluva_boss)"
-                ],
-                "copyright": [
-                    "helluva_boss"
-                ],
-                "artist": [
-                    "xensoi"
-                ],
-                "invalid": [],
-                "lore": [],
-                "meta": [
-                    "2023",
-                    "artist_name",
-                    "digital_media_(artwork)",
-                    "hi_res"
-                ]
-            },
-            "locked_tags": [],
-            "change_seq": 49327863,
-            "flags": {
-                "pending": true,
-                "flagged": false,
-                "note_locked": false,
-                "status_locked": false,
-                "rating_locked": false,
-                "deleted": false
-            },
-            "rating": "s",
-            "fav_count": 34,
-            "sources": [
-                "https://twitter.com/xensoi/status/1642284790018654209",
-                "https://www.furaffinity.net/view/51606688/",
-                "https://pbs.twimg.com/media/FsqQsJbWcAAbiRS?format=jpg&name=4096x4096"
-            ],
-            "pools": [],
-            "relationships": {
-                "parent_id": null,
-                "has_children": false,
-                "has_active_children": false,
-                "children": []
-            },
-            "approver_id": null,
-            "uploader_id": 308088,
-            "description": "",
-            "comment_count": 0,
-            "is_favorited": false,
-            "has_notes": false,
-            "duration": null
-        },
-        {
-            "id": 4113716,
-            "created_at": "2023-06-16T06:09:16.071-04:00",
-            "updated_at": "2023-06-16T07:11:11.848-04:00",
-            "file": {
-                "width": 1535,
-                "height": 1826,
-                "ext": "jpg",
-                "size": 228383,
-                "md5": "1d76aebd66bc40b07075e9da8874fd0c",
-                "url": "https://static1.e621.net/data/1d/76/1d76aebd66bc40b07075e9da8874fd0c.jpg"
-            },
-            "sample": {
-                "has": true,
-                "height": 1011,
-                "width": 850,
-                "url": "https://static1.e621.net/data/sample/1d/76/1d76aebd66bc40b07075e9da8874fd0c.jpg",
-                "alternates": {}
-            },
-            "score": {
-                "up": 6,
-                "down": 0,
-                "total": 6
-            },
-            "tags": {
-                "general": [
-                    "abs",
-                    "ambiguous_gender",
-                    "black_sclera",
-                    "blue_body",
-                    "blush",
-                    "bodily_fluids",
-                    "chair",
-                    "clothed",
-                    "clothing",
-                    "day",
-                    "disembodied_hand",
-                    "dorsal_fin",
-                    "feral",
-                    "fin",
-                    "furniture",
-                    "hand_on_neck",
-                    "hand_on_pecs",
-                    "holowear_(pokemon)",
-                    "light",
-                    "looking_at_viewer",
-                    "muscular",
-                    "muscular_ambiguous",
-                    "narrowed_eyes",
-                    "open_clothing",
-                    "open_mouth",
-                    "open_shirt",
-                    "open_topwear",
-                    "orange_clothing",
-                    "orange_shirt",
-                    "orange_topwear",
-                    "pecs",
-                    "semi-anthro",
-                    "sharp_teeth",
-                    "shirt",
-                    "sky",
-                    "snorkel",
-                    "solo",
-                    "spikes",
-                    "sunlight",
-                    "sweat",
-                    "teeth",
-                    "topwear",
-                    "wing_claws",
-                    "yellow_body",
-                    "yellow_eyes"
-                ],
-                "species": [
-                    "dragon",
-                    "garchomp",
-                    "generation_4_pokemon",
-                    "pokemon_(species)",
-                    "scalie"
-                ],
-                "character": [
-                    "beach_style_garchomp"
-                ],
-                "copyright": [
-                    "nintendo",
-                    "pokemon",
-                    "pokemon_unite"
-                ],
-                "artist": [
-                    "remmus_d"
-                ],
-                "invalid": [],
-                "lore": [],
-                "meta": [
-                    "hi_res"
-                ]
-            },
-            "locked_tags": [],
-            "change_seq": 49327800,
-            "flags": {
-                "pending": true,
-                "flagged": false,
-                "note_locked": false,
-                "status_locked": false,
-                "rating_locked": false,
-                "deleted": false
-            },
-            "rating": "s",
-            "fav_count": 10,
-            "sources": [
-                "https://twitter.com/remmus_d/status/1669283766496530432?s=20"
-            ],
-            "pools": [],
-            "relationships": {
-                "parent_id": 4113714,
-                "has_children": false,
-                "has_active_children": false,
-                "children": []
-            },
-            "approver_id": null,
-            "uploader_id": 1012075,
-            "description": "",
-            "comment_count": 0,
-            "is_favorited": false,
-            "has_notes": false,
-            "duration": null
-        }
+[
+  {
+    "id": 6876126,
+    "created_at": "2026-11-22T13:47:55.870-05:00",
+    "updated_at": "2026-11-22T13:47:55.870-05:00",
+    "change_seq": 83804469,
+    "files": {
+      "meta": {
+        "md5": "3f71494b4f6b82518909c3dff513c9d0",
+        "ext": "png",
+        "size": 2781167,
+        "duration": null,
+        "has_sample": true
+      },
+      "original": {
+        "width": 1104,
+        "height": 1848,
+        "url": "https://static1.e621.net/data/3f/71/3f71494b4f6b82518909c3dff513c9d0.png"
+      },
+      "preview": {
+        "width": 256,
+        "height": 429,
+        "jpg": "https://static1.e621.net/data/preview/3f/71/3f71494b4f6b82518909c3dff513c9d0.jpg",
+        "webp": "https://static1.e621.net/data/preview/3f/71/3f71494b4f6b82518909c3dff513c9d0.webp"
+      },
+      "sample": {
+        "width": 850,
+        "height": 1423,
+        "jpg": "https://static1.e621.net/data/sample/3f/71/3f71494b4f6b82518909c3dff513c9d0.jpg",
+        "webp": "https://static1.e621.net/data/sample/3f/71/3f71494b4f6b82518909c3dff513c9d0.webp"
+      }
+    },
+    "uploader_id": 2456065,
+    "uploader_name": "greengirdle",
+    "approver_id": null,
+    "stats": {
+      "score": {
+        "up": 0,
+        "down": 0,
+        "total": 0
+      },
+      "fav_count": 0,
+      "is_favorited": false,
+      "vote": 0,
+      "comment_count": 0,
+      "hotness": 4155.956657106661
+    },
+    "flags": {
+      "pending": true,
+      "flagged": false,
+      "note_locked": false,
+      "status_locked": false,
+      "rating_locked": false,
+      "deleted": false
+    },
+    "has": {
+      "parent": false,
+      "children": false,
+      "active_children": false,
+      "notes": false,
+      "sample": true
+    },
+    "relationships": {
+      "parent_id": null,
+      "children": []
+    },
+    "pools": [],
+    "rating": "s",
+    "locked_tags": [],
+    "sources": [
+      "https://x.com/greengird11e/status/2124571505740697852",
+      "https://www.furaffinity.net/view/67125396/"
+    ],
+    "description": "https://x.com/greengird11e/status/2124571505740697852",
+    "tags": [
+      "2:3",
+      "4_toes",
+      "5_fingers",
+      "anthro",
+      "areola",
+      "areola_slip",
+      "athletic",
+      "big_breasts",
+      "bikini",
+      "biped",
+      "black_bikini",
+      "black_body",
+      "black_clothing",
+      "black_fur",
+      "black_hair",
+      "black_panties",
+      "black_swimwear",
+      "black_underwear",
+      "bottomwear",
+      "breasts",
+      "brown_areola",
+      "brown_body",
+      "brown_fur",
+      "claws",
+      "clothing",
+      "curvy_figure",
+      "dark_body",
+      "denim",
+      "denim_bottomwear",
+      "denim_clothing",
+      "denim_shorts",
+      "eyebrows",
+      "feet",
+      "felid",
+      "female",
+      "female_anthro",
+      "fingers",
+      "fluffy",
+      "fluffy_chest",
+      "fluffy_hair",
+      "fluffy_tail",
+      "fur",
+      "grand_theft_auto",
+      "grand_theft_auto_vi",
+      "greengirdle",
+      "hair",
+      "hi_res",
+      "hispanic",
+      "jeans",
+      "latino",
+      "looking_at_viewer",
+      "mammal",
+      "markings",
+      "nipple_outline",
+      "pantherine",
+      "panties",
+      "pants",
+      "paws",
+      "rockstar_games",
+      "shorts",
+      "simple_background",
+      "solo",
+      "spots",
+      "spotted_markings",
+      "standing",
+      "swimwear",
+      "tail",
+      "thick_eyebrows",
+      "thick_thighs",
+      "toes",
+      "two-piece_swimsuit",
+      "underwear",
+      "wide_hips"
     ]
-}
+  },
+  {
+    "id": 6876117,
+    "created_at": "2026-11-22T13:41:03.015-05:00",
+    "updated_at": "2026-11-22T13:42:15.680-05:00",
+    "change_seq": 83804411,
+    "files": {
+      "meta": {
+        "md5": "96ee7f5df85fc950e20892573959af51",
+        "ext": "jpg",
+        "size": 265741,
+        "duration": null,
+        "has_sample": true
+      },
+      "original": {
+        "width": 2100,
+        "height": 2100,
+        "url": "https://static1.e621.net/data/96/ee/96ee7f5df85fc950e20892573959af51.jpg"
+      },
+      "preview": {
+        "width": 256,
+        "height": 256,
+        "jpg": "https://static1.e621.net/data/preview/96/ee/96ee7f5df85fc950e20892573959af51.jpg",
+        "webp": "https://static1.e621.net/data/preview/96/ee/96ee7f5df85fc950e20892573959af51.webp"
+      },
+      "sample": {
+        "width": 850,
+        "height": 850,
+        "jpg": "https://static1.e621.net/data/sample/96/ee/96ee7f5df85fc950e20892573959af51.jpg",
+        "webp": "https://static1.e621.net/data/sample/96/ee/96ee7f5df85fc950e20892573959af51.webp"
+      }
+    },
+    "uploader_id": 309418,
+    "uploader_name": "cuenta_nsfw",
+    "approver_id": null,
+    "stats": {
+      "score": {
+        "up": 1,
+        "down": 0,
+        "total": 1
+      },
+      "fav_count": 0,
+      "is_favorited": false,
+      "vote": 0,
+      "comment_count": 0,
+      "hotness": 4155.955701425025
+    },
+    "flags": {
+      "pending": false,
+      "flagged": false,
+      "note_locked": false,
+      "status_locked": false,
+      "rating_locked": false,
+      "deleted": false
+    },
+    "has": {
+      "parent": false,
+      "children": false,
+      "active_children": false,
+      "notes": true,
+      "sample": true
+    },
+    "relationships": {
+      "parent_id": null,
+      "children": []
+    },
+    "pools": [
+      60998
+    ],
+    "rating": "s",
+    "locked_tags": [],
+    "sources": [
+      "https://x.com/Lilyyourlovely/status/2124342224993316991",
+      "https://pbs.twimg.com/media/HXst_R5XAAAWCHs?format=jpg&name=orig"
+    ],
+    "description": "",
+    "tags": [
+      "anthro",
+      "avian",
+      "bird",
+      "blush",
+      "canid",
+      "canine",
+      "canis",
+      "clothing",
+      "comic",
+      "coyote",
+      "cuculiform",
+      "duo",
+      "furniture",
+      "hi_res",
+      "lilyyourlovely",
+      "loonatics_unleashed",
+      "looney_tunes",
+      "male",
+      "male/male",
+      "mammal",
+      "muscular",
+      "muscular_male",
+      "new_world_ground_cuckoo",
+      "on_table",
+      "on_top",
+      "pecs",
+      "rev_runner",
+      "roadrunner",
+      "sitting",
+      "sitting_on_table",
+      "spanish_text",
+      "table",
+      "tail",
+      "tail_motion",
+      "tailwag",
+      "teasing",
+      "tech_e._coyote",
+      "text",
+      "tight_clothing",
+      "translated",
+      "warner_brothers"
+    ]
+  },
+  {
+    "id": 6876116,
+    "created_at": "2026-11-22T13:40:01.654-05:00",
+    "updated_at": "2026-11-22T13:40:01.654-05:00",
+    "change_seq": 83804375,
+    "files": {
+      "meta": {
+        "md5": "cc91652336d7a5f6e5e6b7b92fc340cd",
+        "ext": "jpg",
+        "size": 268123,
+        "duration": null,
+        "has_sample": true
+      },
+      "original": {
+        "width": 1270,
+        "height": 1793,
+        "url": "https://static1.e621.net/data/cc/91/cc91652336d7a5f6e5e6b7b92fc340cd.jpg"
+      },
+      "preview": {
+        "width": 256,
+        "height": 361,
+        "jpg": "https://static1.e621.net/data/preview/cc/91/cc91652336d7a5f6e5e6b7b92fc340cd.jpg",
+        "webp": "https://static1.e621.net/data/preview/cc/91/cc91652336d7a5f6e5e6b7b92fc340cd.webp"
+      },
+      "sample": {
+        "width": 850,
+        "height": 1200,
+        "jpg": "https://static1.e621.net/data/sample/cc/91/cc91652336d7a5f6e5e6b7b92fc340cd.jpg",
+        "webp": "https://static1.e621.net/data/sample/cc/91/cc91652336d7a5f6e5e6b7b92fc340cd.webp"
+      }
+    },
+    "uploader_id": 273509,
+    "uploader_name": "arli",
+    "approver_id": null,
+    "stats": {
+      "score": {
+        "up": 0,
+        "down": -1,
+        "total": -1
+      },
+      "fav_count": 0,
+      "is_favorited": false,
+      "vote": 0,
+      "comment_count": 0,
+      "hotness": 4155.955559386378
+    },
+    "flags": {
+      "pending": false,
+      "flagged": false,
+      "note_locked": false,
+      "status_locked": false,
+      "rating_locked": false,
+      "deleted": false
+    },
+    "has": {
+      "parent": false,
+      "children": false,
+      "active_children": false,
+      "notes": false,
+      "sample": true
+    },
+    "relationships": {
+      "parent_id": null,
+      "children": []
+    },
+    "pools": [],
+    "rating": "s",
+    "locked_tags": [],
+    "sources": [
+      "https://x.com/shirokumaou/status/2116124452736135321"
+    ],
+    "description": "",
+    "tags": [
+      "anthro",
+      "babe_bunyan_(tas)",
+      "belly",
+      "blonde_hair",
+      "blue_eyes",
+      "body_hair",
+      "bovid",
+      "bovine",
+      "bulge",
+      "cattle",
+      "chest_hair",
+      "clothing",
+      "fur",
+      "hair",
+      "hi_res",
+      "horn",
+      "jewelry",
+      "lifewonders",
+      "male",
+      "mammal",
+      "moobs",
+      "necklace",
+      "overweight",
+      "shirokumaou",
+      "shirt",
+      "solo",
+      "tank_top",
+      "tokyo_afterschool_summoners",
+      "topwear",
+      "white_body",
+      "white_fur"
+    ]
+  },
+  {
+    "id": 6876115,
+    "created_at": "2026-11-22T13:39:46.953-05:00",
+    "updated_at": "2026-11-22T13:42:15.786-05:00",
+    "change_seq": 83804373,
+    "files": {
+      "meta": {
+        "md5": "1a8c57cedcd908f0d5c9d959abf71423",
+        "ext": "jpg",
+        "size": 188637,
+        "duration": null,
+        "has_sample": true
+      },
+      "original": {
+        "width": 1081,
+        "height": 1822
+      },
+      "preview": {
+        "width": 256,
+        "height": 431,
+        "jpg": "https://static1.e621.net/data/preview/1a/8c/1a8c57cedcd908f0d5c9d959abf71423.jpg",
+        "webp": "https://static1.e621.net/data/preview/1a/8c/1a8c57cedcd908f0d5c9d959abf71423.webp"
+      },
+      "sample": {
+        "width": 850,
+        "height": 1433,
+        "jpg": "https://static1.e621.net/data/sample/1a/8c/1a8c57cedcd908f0d5c9d959abf71423.jpg",
+        "webp": "https://static1.e621.net/data/sample/1a/8c/1a8c57cedcd908f0d5c9d959abf71423.webp"
+      }
+    },
+    "uploader_id": 938707,
+    "uploader_name": "Panchii",
+    "approver_id": null,
+    "stats": {
+      "score": {
+        "up": 0,
+        "down": 0,
+        "total": 0
+      },
+      "fav_count": 1,
+      "is_favorited": false,
+      "vote": 0,
+      "comment_count": 0,
+      "hotness": 4155.9555253561075
+    },
+    "flags": {
+      "pending": false,
+      "flagged": false,
+      "note_locked": false,
+      "status_locked": false,
+      "rating_locked": false,
+      "deleted": false
+    },
+    "has": {
+      "parent": false,
+      "children": false,
+      "active_children": false,
+      "notes": false,
+      "sample": true
+    },
+    "relationships": {
+      "parent_id": null,
+      "children": []
+    },
+    "pools": [],
+    "rating": "s",
+    "locked_tags": [],
+    "sources": [
+      "https://x.com/arcane_freak/status/1997509461238481055",
+      "https://pbs.twimg.com/media/G7iUO3raAAAuBXA?format=jpg&name=orig"
+    ],
+    "description": "",
+    "tags": [
+      "2025",
+      "5_fingers",
+      "abstract_background",
+      "arcane_freak",
+      "armwear",
+      "bedroom_eyes",
+      "big_breasts",
+      "bow_tie",
+      "breasts",
+      "cleavage",
+      "cleavage_overflow",
+      "clothed",
+      "clothed_female",
+      "clothed_humanoid",
+      "clothing",
+      "digital_media_(artwork)",
+      "dress",
+      "elbow_gloves",
+      "eyeshadow",
+      "female",
+      "female_humanoid",
+      "fingers",
+      "footwear",
+      "glistening",
+      "glistening_breasts",
+      "gloves",
+      "green_armwear",
+      "green_body",
+      "green_clothing",
+      "green_elbow_gloves",
+      "green_eyeshadow",
+      "green_gloves",
+      "green_hair",
+      "green_handwear",
+      "green_legwear",
+      "green_pantyhose",
+      "green_skin",
+      "hair",
+      "hand_on_breast",
+      "hand_on_hip",
+      "hand_on_own_hip",
+      "handwear",
+      "hi_res",
+      "high_heels",
+      "huge_breasts",
+      "humanoid",
+      "legwear",
+      "makeup",
+      "mario_bros",
+      "mimi_(paper_mario)",
+      "narrowed_eyes",
+      "nintendo",
+      "not_furry",
+      "panties",
+      "panty_peek",
+      "pantyhose",
+      "paper_mario",
+      "pattern_clothing",
+      "pattern_dress",
+      "pigtails",
+      "red_bow_tie",
+      "red_clothing",
+      "red_footwear",
+      "red_high_heels",
+      "red_panties",
+      "red_underwear",
+      "seductive",
+      "shoes",
+      "solo",
+      "spots",
+      "spotted_clothing",
+      "spotted_dress",
+      "square_head",
+      "thick_thighs",
+      "underwear",
+      "wide_hipped_female",
+      "wide_hipped_humanoid",
+      "wide_hips",
+      "yellow_clothing",
+      "yellow_dress"
+    ]
+  },
+  {
+    "id": 6876114,
+    "created_at": "2026-11-22T13:39:31.878-05:00",
+    "updated_at": "2026-11-22T13:40:38.204-05:00",
+    "change_seq": 83804383,
+    "files": {
+      "meta": {
+        "md5": "aff8250eb432c208cad8167912b9a489",
+        "ext": "jpg",
+        "size": 188768,
+        "duration": null,
+        "has_sample": true
+      },
+      "original": {
+        "width": 2100,
+        "height": 2100,
+        "url": "https://static1.e621.net/data/af/f8/aff8250eb432c208cad8167912b9a489.jpg"
+      },
+      "preview": {
+        "width": 256,
+        "height": 256
+      },
+      "sample": {
+        "width": 850,
+        "height": 850,
+        "jpg": "https://static1.e621.net/data/sample/af/f8/aff8250eb432c208cad8167912b9a489.jpg",
+        "webp": "https://static1.e621.net/data/sample/af/f8/aff8250eb432c208cad8167912b9a489.webp"
+      }
+    },
+    "uploader_id": 309418,
+    "uploader_name": "cuenta_nsfw",
+    "approver_id": null,
+    "stats": {
+      "score": {
+        "up": 1,
+        "down": 0,
+        "total": 1
+      },
+      "fav_count": 0,
+      "is_favorited": false,
+      "vote": 0,
+      "comment_count": 0,
+      "hotness": 4155.955490459657
+    },
+    "flags": {
+      "pending": false,
+      "flagged": false,
+      "note_locked": false,
+      "status_locked": false,
+      "rating_locked": false,
+      "deleted": false
+    },
+    "has": {
+      "parent": false,
+      "children": false,
+      "active_children": false,
+      "notes": true,
+      "sample": true
+    },
+    "relationships": {
+      "parent_id": null,
+      "children": []
+    },
+    "pools": [
+      60998
+    ],
+    "rating": "s",
+    "locked_tags": [],
+    "sources": [
+      "https://x.com/Lilyyourlovely/status/2124342224993316991",
+      "https://pbs.twimg.com/media/HXst-_aW4AAnEcr?format=jpg&name=orig"
+    ],
+    "description": "",
+    "tags": [
+      "anthro",
+      "athletic",
+      "athletic_male",
+      "avian",
+      "bird",
+      "blush",
+      "clothing",
+      "comic",
+      "cuculiform",
+      "furniture",
+      "hi_res",
+      "lilyyourlovely",
+      "loonatics_unleashed",
+      "looney_tunes",
+      "male",
+      "new_world_ground_cuckoo",
+      "offscreen_character",
+      "on_table",
+      "rev_runner",
+      "roadrunner",
+      "seductive",
+      "sitting",
+      "sitting_on_table",
+      "solo",
+      "spanish_text",
+      "spread_legs",
+      "spreading",
+      "table",
+      "teasing",
+      "text",
+      "tight_clothing",
+      "translated",
+      "warner_brothers"
+    ]
+  }
+]
